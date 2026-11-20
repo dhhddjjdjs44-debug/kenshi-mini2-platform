@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-11-20T11:57:02.049658+05:00",
+  "status": "OFFLINE_HW03_KEYS_CPU_READY_AUDIO_DSP_RESEARCH_NOT_INSTALLED",
+  "parent": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_mvp_20261120_005032",
+  "parent_manifest_sha256": "1172bae4cc31a994713838d82278b3d0500ededb12c3e61fcfbd71a245ea840c",
+  "parent_files_verified": 670,
+  "installed_firmware_NOT_modified": true,
+  "physical_operations_this_iteration": 0,
+  "priority": [
+    "physical_audio_sink",
+    "safe_board_haptic",
+    "evidence_CPU_clock",
+    "key_tester_with_expected_and_detected",
+    "profiling_before_optimization"
+  ],
+  "inherited_reports_are_NOT_new_evidence": true,
+  "batch": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700",
+  "next_code_edit_requires_new_copy": false,
+  "sealed": false,
+  "physical_writer_created": false,
+  "updated_at": "2026-11-20T17:15:19.011950+05:00",
+  "report": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\REPORT_HW03_RU.md",
+  "candidate_pointer": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\current_hw_diagnostics_candidate.json",
+  "test_groups_MODEL_PC_only": 78,
+  "audio_research": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\research\\hw\\RESEARCH_NEXT_RU.md",
+  "battery_installed_user_reported": true,
+  "fresh_live_baseline": false,
+  "latest_offline_checkpoint": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\hw03_checkpoint_20261120\\verification.json",
+  "physical_operations": 0,
+  "source_may_continue_in_this_copy": true,
+  "key_map_NOT_changed": false,
+  "key_map_applied_in_candidate": true,
+  "key_map_hardware_retest_pending": true,
+  "exact_cpu_hz_UNKNOWN": true,
+  "estimated_cpu_hz_measured_on_phone": null,
+  "installed_firmware_NOT_modified_in_this_offline_checkpoint": true,
+  "last_verified_NOR_NOT_fresh_live_baseline": "834bf1dc728d27d4b77242ea1b943fd0d0ba73fafe4376ab24a5194d4dd1fd85",
+  "installed_authority": "STOCK_CODE_RESTORED_CURRENT_NV_PRESERVED",
+  "physical_readiness": "BATTERY_PRESENT_ONLY_NOT_CONNECTION_OR_COLD_BASELINE",
+  "hardware_audio": false,
+  "hardware_vibration": false,
+  "flavors": [
+    {
+      "name": "sdk",
+      "independent_of_doom": true,
+      "entry": "0x14c9c",
+      "engine_bytes": 29924,
+      "engine_sha256": "93e5a4ac8fe940f8b6b1c812e4a59975c1985efdb0bb930959e6dfa47b902a52",
+      "loader_bytes": 13964,
+      "loader_sha256": "8eaf7f0dabf72d7994c3bccf96ae497a4c3eb4d9248434a8b29aeb57f22416fc",
+      "engine_bss_end": "0x24a28",
+      "ram_slack": 4044248,
+      "loader_bss_end": "0xe840",
+      "nor_free": 2420,
+      "segments": [
+        {
+          "addr": 65536,
+          "offset": 4096,
+          "filesz": 25344,
+          "memsz": 25344,
+          "flags": 5
+        },
+        {
+          "addr": 94208,
+          "offset": 0,
+          "filesz": 0,
+          "memsz": 55848,
+          "flags": 6
+        },
+        {
+          "addr": 1879088256,
+          "offset": 3200,
+          "filesz": 0,
+          "memsz": 236,
+          "flags": 6
+        }
+      ],
+      "physical_operations": 0,
+      "hardware_audio_implemented": false,
+      "hardware_tests_performed": false
+    },
+    {
+      "name": "doom",
+      "independent_of_doom": false,
+      "entry": "0x15114",
+      "engine_bytes": 408008,
+      "engine_sha256": "0be8d62439780232b7fbcf22fd7cafe725482963fec7a29675637504e6b63fdf",
+      "loader_bytes": 13964,
+      "loader_sha256": "04b298fc0f10821346b4a4ecd4b4d989fbf18d5106ab9e76129892645455c225",
+      "engine_bss_end": "0x3e9a48",
+      "ram_slack": 91576,
+      "loader_bss_end": "0xe840",
+      "nor_free": 2420,
+      "segments": [
+        {
+          "addr": 65536,
+          "offset": 4096,
+          "filesz": 282380,
+          "memsz": 282380,
+          "flags": 5
+        },
+        {
+          "addr": 347920,
+          "offset": 286480,
+          "filesz": 121000,
+          "memsz": 3754808,
+          "flags": 6
+        },
+        {
+          "addr": 1879088256,
+          "offset": 3200,
+          "filesz": 0,
+          "memsz": 236,
+          "flags": 6
+        }
+      ],
+      "physical_operations": 0,
+      "hardware_audio_implemented": false,
+      "hardware_tests_performed": false
+    }
+  ],
+  "latest_research_audits": [
+    "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\research\\hw\\stock-vibration-override-audit.json",
+    "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\research\\hw\\stock-dsp-patch-bootstrap-audit.json",
+    "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\research\\hw\\stock-dsp-wakeup-audit.json",
+    "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\research\\hw\\stock-dsp-psram-mapping-audit.json",
+    "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\research\\hw\\stock-pcm-ring-audit.json"
+  ],
+  "developer_starter": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\current_game_sdk_starter.json",
+  "hardware_release_complete": false
+}

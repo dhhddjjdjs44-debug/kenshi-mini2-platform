@@ -1,0 +1,90 @@
+{
+  "at": "2026-11-20T17:55:46.358541+05:00",
+  "status": "PASS",
+  "edition": "PUBLIC_DOCUMENTATION_ONLY",
+  "checks": {
+    "161_unique_sources": {
+      "pass": true
+    },
+    "public_source_hashes_and_sizes": {
+      "pass": true,
+      "detail": []
+    },
+    "documented_account_redactions_reproducible": {
+      "pass": true,
+      "detail": {
+        "files": 66,
+        "replacements": 980,
+        "errors": []
+      }
+    },
+    "original_local_bundle_unchanged": {
+      "pass": true,
+      "detail": []
+    },
+    "installed_pointer_unchanged": {
+      "pass": true
+    },
+    "10_exact_chapters_in_combined_guide": {
+      "pass": true
+    },
+    "documentation_only_no_writers_dumps_binaries_or_user_media": {
+      "pass": true
+    },
+    "only_root_bundle_AGENTS_active": {
+      "pass": true
+    },
+    "all_JSON_parse": {
+      "pass": true,
+      "detail": []
+    },
+    "bounded_private_data_scan": {
+      "pass": true,
+      "detail": {
+        "patterns": [
+          "local_account_name",
+          "unredacted_windows_user",
+          "private_15_digit_identifier",
+          "secret_tokens",
+          "email_addresses",
+          "ipv4"
+        ],
+        "findings": [],
+        "note": "Text-pattern audit, not a guarantee against every possible sensitive value."
+      }
+    },
+    "authored_navigation_links_and_anchors": {
+      "pass": true,
+      "detail": {
+        "links": 217,
+        "errors": [],
+        "historical_source_links_excluded": true
+      }
+    },
+    "source_index_covers_all_records": {
+      "pass": true
+    },
+    "does_not_claim_complete_hardware_or_SDK_distribution": {
+      "pass": true
+    }
+  },
+  "source_records": 161,
+  "chapters": 10,
+  "device_operations": 0,
+  "SD_operations": 0,
+  "flashing_or_formatting": false,
+  "limitations": [
+    "Historical archive links can point to files outside this repository.",
+    "Pattern scans do not guarantee detection of all possible sensitive text.",
+    "No hardware or SDK test rerun in this publication task.",
+    "Absolute paths are anonymized historical provenance, not included software."
+  ],
+  "manifest": {
+    "file": "MANIFEST.sha256",
+    "algorithm": "SHA256",
+    "excludes": [
+      "MANIFEST.sha256"
+    ],
+    "includes_validation_report": true
+  }
+}

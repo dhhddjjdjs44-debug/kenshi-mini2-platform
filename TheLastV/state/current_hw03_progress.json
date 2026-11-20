@@ -1,0 +1,45 @@
+{
+  "status": "HW03_GAME_SDK_STARTER_VERIFIED_PC_ONLY",
+  "updated_at": "2026-11-20T17:15:19.011950+05:00",
+  "batch": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700",
+  "report": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\REPORT_HW03_RU.md",
+  "verification": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\hw03_checkpoint_20261120\\verification.json",
+  "previous_offline_checkpoint": {
+    "status": "PASS_HW03_FINAL_OFFLINE_CHECKPOINT",
+    "updated_at": "2026-11-20T16:46:47.024374+05:00",
+    "batch": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700",
+    "verification": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\hw03_checkpoint_20261120\\verification.json",
+    "report": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\REPORT_HW03_RU.md",
+    "physical_operations": 0,
+    "sealed": false,
+    "audio_and_motor_goal_complete": false,
+    "CPU_frequency_measured": false,
+    "battery_installed_now_user_reported": true
+  },
+  "sealed": false,
+  "audio_and_motor_goal_complete": false,
+  "CPU_frequency_measured": false,
+  "battery_installed_now_user_reported": true,
+  "read_only_sd_observation": {
+    "inventory": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\phone_music_inventory_20261120_165133\\inventory.json",
+    "headers": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\phone_music_inventory_20261120_165133\\mpeg_headers.json",
+    "report": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\phone_music_inventory_20261120_165133\\REPORT_RU.md",
+    "tracks": 157,
+    "mp3_supported_in_current_player": false,
+    "device_writes": 0,
+    "nor_operations": 0,
+    "physical_writer_launched": false,
+    "device_read_access_performed": true,
+    "fresh_cold_bootrom_ready": false
+  },
+  "native_research": {
+    "report": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700\\research\\hw\\stock-dsp-clock-prerequisites-audit.json",
+    "cases": 24,
+    "hardware_tests": false
+  },
+  "installed_authority_sha256_unchanged": "20ea1983d9fdac376ecda2fb0a8fe4450d6783dcfe98aec95e86d55f5a66e731",
+  "developer_starter": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\current_game_sdk_starter.json",
+  "developer_preview_test_groups": 6,
+  "development_MODEL_PC_groups": 78,
+  "hardware_release_complete": false
+}

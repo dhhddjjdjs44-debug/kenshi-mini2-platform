@@ -1,0 +1,20 @@
+/* Raw keypad capture wizard; does not change mapping or write persistent data. */
+#ifndef K_KEY_TEST_H
+#define K_KEY_TEST_H
+#include <stdint.h>
+#include "k_keys.h"
+#define K_KEY_TEST_COUNT K_PHYS_COUNT
+enum k_key_phase { K_KEY_IDLE, K_KEY_PRESS, K_KEY_HELD, K_KEY_RESULT, K_KEY_DONE };
+enum k_key_result { K_KEY_NONE, K_KEY_RECORDED, K_KEY_MULTIPLE, K_KEY_DUPLICATE,
+                    K_KEY_CHANGED, K_KEY_SKIPPED };
+struct k_key_test {
+    uint32_t phase, expected, result, candidate, detected, held_count, exit;
+    uint32_t idle_at, result_at, chord_at, chord, idle_started, review, previous_down;
+    uint8_t contact[K_KEY_TEST_COUNT];
+    uint16_t raw[5], last_raw[5];
+};
+void k_key_test_begin(struct k_key_test *test, uint32_t now);
+void k_key_test_poll(struct k_key_test *test, const uint16_t raw[5], uint32_t now);
+const char *k_key_test_expected(unsigned index);
+const char *k_key_test_detected(unsigned contact);
+#endif

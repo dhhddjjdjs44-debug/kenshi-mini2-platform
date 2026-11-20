@@ -1,0 +1,234 @@
+{
+  "version": "0.3-hw-development-20261120",
+  "status": "OFFLINE_BUILD_TESTED_KEYS_CPU_RESEARCH_NOT_INSTALLED",
+  "installed_authority": "STOCK_CODE_RESTORED_CURRENT_NV_PRESERVED",
+  "physical_operations": 0,
+  "hardware_verified_in_this_iteration": false,
+  "capabilities": [
+    {
+      "name": "sdk_c99",
+      "status": "implemented-unverified",
+      "note": "Independent SDK/example; ARM fixture + sdk ELF, no Doom symbols",
+      "evidence": [
+        "arm-sdk-tests.json",
+        "packaging-audit.json"
+      ]
+    },
+    {
+      "name": "game_launcher_return",
+      "status": "implemented-unverified",
+      "note": "Menu/demo + linked Doom pause/resume; no arbitrary ELF loading",
+      "evidence": [
+        "arm-sdk-tests.json",
+        "paired-boot-tests.json"
+      ]
+    },
+    {
+      "name": "phone_demo_ui",
+      "status": "implemented-unverified",
+      "note": "Dial/back/delete/any-number->ID UI; no real calls/SMS",
+      "evidence": [
+        "arm-sdk-tests.json"
+      ]
+    },
+    {
+      "name": "original_imei",
+      "status": "not-implemented",
+      "note": "Original ID not extracted; optional checksum-valid private config labeled ID FROM CONFIG",
+      "evidence": [
+        "asset-packer-tests.json"
+      ]
+    },
+    {
+      "name": "music_software",
+      "status": "implemented-unverified",
+      "note": "WAV mono16 streaming from prepared KDATA.PAK; fake sink only. Existing arbitrary SD/My Music tracks are NOT inventoried or supported by direct-files/MP3 decoder.",
+      "evidence": [
+        "arm-sdk-tests.json",
+        "media-converter-tests.json"
+      ]
+    },
+    {
+      "name": "audio_physical_pcm",
+      "status": "not-implemented",
+      "note": "Still K_UNSUPPORTED. Native stock DSP patch/bootstrap/wakeup/mapping were reproduced offline only; no DSP ACK, analog route or speaker output verified.",
+      "evidence": [
+        "hardware-probe-tests.json",
+        "research/hw/stock-dsp-patch-bootstrap-audit.json",
+        "research/hw/stock-dsp-wakeup-audit.json",
+        "research/hw/stock-dsp-psram-mapping-audit.json"
+      ]
+    },
+    {
+      "name": "video_streaming",
+      "status": "implemented-unverified",
+      "note": "Read-only KVID row streaming, pause/EOF/return; frame rates NOT measured on phone",
+      "evidence": [
+        "arm-sdk-tests.json",
+        "paired-boot-tests.json",
+        "media-converter-tests.json"
+      ]
+    },
+    {
+      "name": "video_av_software",
+      "status": "implemented-unverified",
+      "note": "Follows actual-played fake cursor; physical version falls back to SILENT",
+      "evidence": [
+        "arm-sdk-tests.json"
+      ]
+    },
+    {
+      "name": "video_av_physical",
+      "status": "not-implemented",
+      "note": "Requires proven PCM sink and actual played-sample cursor",
+      "evidence": []
+    },
+    {
+      "name": "haptics_api",
+      "status": "implemented-unverified",
+      "note": "Cooperative <=100ms requests/cancel/wrap; fake motor only",
+      "evidence": [
+        "arm-sdk-tests.json"
+      ]
+    },
+    {
+      "name": "haptics_physical",
+      "status": "not-implemented",
+      "note": "Production motor_set unsupported. Stock output6 override was traced to an async audio/DSP handler; generic PMU fallback is not equivalent. No physical movement claim.",
+      "evidence": [
+        "hardware-probe-tests.json",
+        "research/hw/stock-vibration-override-audit.json",
+        "research/hw/stock-vibration-path-audit.json"
+      ]
+    },
+    {
+      "name": "cpu_frequency",
+      "status": "not-implemented",
+      "note": "Exact Hz=0 UNKNOWN. New differential N/2N TCM estimate is ready but NOT run on phone; assumes GPT26MHz and zero-wait ARM7 loop timing, rejects >2% inconsistent runs; no PLL/cache changes by probe.",
+      "evidence": [
+        "cpu-tcm-tests.json",
+        "hardware-probe-tests.json"
+      ]
+    },
+    {
+      "name": "input",
+      "status": "implemented-unverified",
+      "note": "Shared photo-derived 20-contact table now used by SDK/shell/key tester/Doom. UP39, RIGHT30, left soft33 select/Doom menu, right soft72 back. END skipped/unknown. New map not yet physically retested.",
+      "evidence": [
+        "keymap-tests.json",
+        "diagnostics-keys-tests.json"
+      ]
+    },
+    {
+      "name": "rtc_clock",
+      "status": "implemented-unverified",
+      "note": "Read-only coherent clock adapter, fallback UPTIME; model callback tested",
+      "evidence": [
+        "arm-sdk-tests.json"
+      ]
+    },
+    {
+      "name": "runtime_stability",
+      "status": "implemented-unverified",
+      "note": "15 virtual minute/51 demo-menu cycles; NOT15min physical longevity",
+      "evidence": [
+        "arm-sdk-tests.json"
+      ]
+    },
+    {
+      "name": "motor_diagnostic",
+      "status": "failed",
+      "note": "Earlier HW0.2 50ms PMU probe was NOT felt by user. In-call cleanup is modeled, not proof of motion. New stock DSP override identified; old probe is not a proven board path.",
+      "evidence": [
+        "hardware-probe-tests.json",
+        "research/hw/stock-vibration-override-audit.json"
+      ]
+    },
+    {
+      "name": "cpu_lower_bound",
+      "status": "implemented-unverified",
+      "note": "3 native ARM ADD kernels, slowest elapsed+1tick against GPT26M. Lower bound only, exactHz remainsunknown.",
+      "evidence": [
+        "hardware-probe-tests.json"
+      ]
+    },
+    {
+      "name": "performance_telemetry",
+      "status": "implemented-unverified",
+      "note": "Last game update/conversion/DMA times persist across menu. No additional FPS improvement claimed.",
+      "evidence": [
+        "diagnostics-keys-tests.json"
+      ]
+    },
+    {
+      "name": "cpu_tcm_estimate",
+      "status": "implemented-unverified",
+      "note": "N=65536/2N A/B differential, 3 runs, >2% disagreement rejected, original 16B scratch restored. UI EST MHZ; exact Hz stays0; hardware measurement pending.",
+      "evidence": [
+        "cpu-tcm-tests.json"
+      ]
+    }
+  ],
+  "user_runtime_observation": "STOCK currently installed. User: speaker player audible without headphones, Snake vibration present, Snake audio not audible/cause unknown; battery installed NOW. Custom HW0.2 vibration failed, custom physical PCM absent.",
+  "audio_research_progress": {
+    "alice_decoded_bytes": 1328768,
+    "mapping_checks": 10381,
+    "stock_afe_slice_model_cases": 4,
+    "runtime_virtual_layout_proven": false,
+    "physical_pcm_driver": false,
+    "private_decoded_firmware_must_NOT_be_packaged": true,
+    "kernel_decoded_bytes": 1535504,
+    "kernel_native_decode_and_BCJ_verified": true,
+    "DCMG_native_decoded_overlays": 19,
+    "DCMG_decoded_total_bytes": 223176,
+    "PCM_ring_native_cases": 2040,
+    "PCM_ring_native_advances": 4941,
+    "isolated_transport_model_cases": 2500,
+    "isolated_transport_linked_in_firmware": false,
+    "native_stock_DSP_patch_bootstrap": true,
+    "native_wakeup_and_no_ACK_boundary": true,
+    "stock_output6_registered_override_traced": true,
+    "stock_DSP_PSARM_windows_overlap_Doom_bytes": 6728,
+    "runtime_virtual_layout_scope": "Native kernel/DCMG layouts and concrete ALICE code paths execute offline; entire stock OS environment/ALICE block-edge restoration not established.",
+    "remaining": [
+      "board domain power/clock/reset with safe bounded accesses",
+      "real DSP handshake",
+      "dynamic audio module/init and speaker analog routing",
+      "reserve uncached DSP windows without Doom BSS/cache conflict",
+      "implement read-only direct file/MP3 decoder for inventoried157 MPEG1 LayerIII tracks"
+    ],
+    "private_stock_DSP_patch_must_NOT_be_packaged": true
+  },
+  "offline_checkpoint": {
+    "at": "2026-11-20T16:35:20.352584+05:00",
+    "battery_installed_user_reported": true,
+    "physical_operations": 0,
+    "stock_override_traced": true,
+    "stock_dsp_bootstrap_model": true,
+    "stock_dsp_ready_physical": false,
+    "doom_stock_dsp_window_collision_bytes": 6728,
+    "exact_cpu_hz_UNKNOWN": true
+  },
+  "updated_at": "2026-11-20T16:39:36.102919+05:00",
+  "developer_preview": {
+    "status": "implemented-unverified",
+    "kind": "ARM_C_WITH_FAKE_HAL_NOT_FULL_PHONE",
+    "entry": "Preview-Game.ps1",
+    "guide": "docs/START_GAME_RU.md",
+    "audio": false,
+    "motor": false,
+    "hardware_FPS_or_MHz_measured": false,
+    "hardware_retest_pending": true,
+    "pc_validation": "6 control/lifecycle groups and withdrawn Tk image/widget smoke PASS; not physical phone evidence",
+    "evidence": [
+      "preview-tests.json"
+    ]
+  },
+  "music_inventory": {
+    "tracks": 157,
+    "sample_headers": "MPEG1 LayerIII 44100Hz stereo; sampled320kbps",
+    "whole_file_decode_verified": false,
+    "direct_MP3_playback": false,
+    "physical_operations": "previous read-only inventory only"
+  }
+}

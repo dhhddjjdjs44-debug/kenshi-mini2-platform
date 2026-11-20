@@ -1,0 +1,1 @@
+RAM ELF — НЕ ПРОШИВКА. Эмуляторный E1M1 и software PCM прошли. Нужны реальный SD/FAT WAD stream, RAM-загрузчик и аппаратный PCM sink. Файл MODEL_ONLY_doom_frame.png снят с framebuffer ARM/Unicorn, не с телефона. Смотрите общий REPORT_RU.md. Исходники сборки в source/, vendor/PureDOOM.h и GPLv2 LICENSE не изменены.

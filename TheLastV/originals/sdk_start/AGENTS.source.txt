@@ -1,0 +1,22 @@
+# Kenshi SDK: работа со своей игрой
+
+Это самостоятельная рабочая копия SDK для разработки игры, а не исследовательский
+дамп и не готовый аппаратный релиз. Работай В ЭТОЙ папке; не перенаправляй правки
+в абсолютный working_copy из PLATFORM_PROVENANCE.json — это только происхождение.
+
+Перед правками прочитай docs/START_GAME_RU.md и docs/SDK_API_RU.md.
+Игра: apps/demo_game.c/.h, SDK: sdk/include и sdk/src. Сохраняй C99,
+не добавляй Doom-зависимости и MMIO в игровую логику. Preview-Game.ps1 собирает
+реальный ARM-код и запускает тестовый HAL на ПК; нет hot reload/phone FPS measurement.
+После изменений: Preview-Game.ps1 -Headless, Build-Platform.ps1 -Flavor sdk,
+Test-Platform.ps1 -Flavor sdk. Сначала изучи файлы, не стирай чужие правки.
+
+Физические audio/motor unsupported, CPU MHz unknown. Не подделывай capabilities
+успехом fake HAL/PCM/PMIC readback и не утверждай260MHz. Save-файлы/MP3 direct player
+не реализованы. Новая карта кнопок пока не проверена на устройстве.
+
+Ни одной операции с USB/SD/NOR этот SDK не авторизует. Нет writer. Не форматируй
+и не меняй диски, IMEI/NV; не запускай старые инструменты. Развёртывание требует
+отдельной свежей готовности и актуальных аппаратных инструкций владельца.
+Loader/ELF парные: после изменения игры пересобираются оба, нельзя просто заменить
+чужой DOOM.ELF или отключить pins. Внешние инструменты/firmware private blobs не включены.

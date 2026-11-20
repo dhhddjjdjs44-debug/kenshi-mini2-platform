@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-20T17:29:19.186993+05:00",
+  "timezone": "Asia/Yekaterinburg",
+  "bundle_type": "PUBLIC_DOCUMENTATION_ONLY_NOT_FIRMWARE_OR_SDK",
+  "installed_firmware": "STOCK_CODE_RESTORED_CURRENT_NV_PRESERVED",
+  "fresh_live_baseline_available": false,
+  "custom_hardware_audio": false,
+  "custom_hardware_vibration": false,
+  "exact_CPU_hz": null,
+  "new_keys_applied_in_candidate": true,
+  "new_keys_hardware_retested": false,
+  "developer_SDK_PC_verified": true,
+  "main_MODEL_PC_test_groups": 78,
+  "independent_SDK_test_groups": 70,
+  "phone_operations_this_documentation_task": 0,
+  "formatting": false,
+  "writer_included": false,
+  "source_documents": 161,
+  "private_value_redactions": 2,
+  "scope": "All Markdown documentation from two project output trees, active platform root/docs/research, hardware root and tested SDK docs; no claim to every README on computer",
+  "public_edition": true,
+  "public_windows_account_placeholder": "USER"
+}

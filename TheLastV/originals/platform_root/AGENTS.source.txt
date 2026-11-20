@@ -1,0 +1,330 @@
+## SDK для своей игры выдан отдельно — 2026-11-20T17:15:19.011950+05:00
+
+Проверенный PC-start комплект: `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\outputs\kenshi_game_sdk_start_20261120_170604`.
+Указатель: work/current_game_sdk_starter.json. Независимый отDoom SDK распакован,
+собран и проверен:70групп, documented Preview-Game.ps1 -Headless PASS.
+В UNSEALED development78MODEL/PCгрупп PASS; добавлены6preview tests.
+Preview исполняет реальный ARM-код игры с FAKEHAL, не весь телефон и не аппаратный FPS.
+Своя игра: apps/demo_game.c/.h; guide docs/START_GAME_RU.md. В экспортированном SDK
+AGENTS.md самостоятельный: править sdk/комплекта, не provenanceworking_copy.
+Телефон остаётся STOCK;0deviceoperations в этой итерации, binaries unchanged;
+customaudio/vib нет, MHz неизвестны, MP3 direct player нет. Полный аппаратный релиз
+НЕ готов, SDK-start не подмена этим требованиям. USB-storage observation неcoldBootROM.
+Для каждой новой сборки игры пока парныеloader/ELFpins: не обещать SD-onlyupdate.
+
+## Read-only SD/MP3 checkpoint — 2026-11-20T16:56:27.942241+05:00
+
+Карта телефона свежо определена CIM: MINI_2USB/LUN0 → D:FAT32,16GB.
+В My Music157MP3; начальные фреймы всех157: MPEG1LayerIII,44.1kHz,stereo,
+320kbps в выборке (НЕ полная проверка/CBR). У custom WAV/KDATA player MP3 нет.
+Ноль devicewrites/NOR/writer/форматирования; только перечисление+bounded headers.
+USB-storage подтверждено, cold BootROM/готовность к прошивке — НЕТ.
+Stock остаётся; audio/motor не готовы, MHz неизвестны. Отчёт:
+`C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\phone_music_inventory_20261120_165133\REPORT_RU.md`.
+Новый research audit24nativecases — не firmware regression/аппаратный успех.
+Ниже старые offline checkpoints; формулировка «SDещёнеinventoried» устарела.
+
+## HW0.3: актуальная точка продолжения — 2026-11-20T16:41:40.830759+05:00
+
+**Устройство: STOCK**, не платформа0.1 и не HW0.3. Authority: `work/current_installed_firmware.json`,
+последний verifiedNOR834bf…1fd85 НЕfreshlivebaseline послеstockboot. Пользователь:
+динамикплеера слышен безнаушников, Snakevibесть, SnakeaudioНЕслышен; батареяустановлена
+сейчас («В телефоне аккум»), подключение/coldBootROMнеподтверждены. Вэтомofflinecheckpoint
+0USB/NOR/SDoperations; старыеwritersSPENT, новыйwriterне создан.
+
+**Разработка:** `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700`
+UNSEALED, можно продолжатьздесь. Последнийотчёт: `REPORT_HW03_RU.md`;
+`work/current_hw_diagnostics_candidate.json` и `work/current_platform_development.json`
+обновлены по фактическим ELF/loaderhashes. SealedV11/V12/0.1/frozenHW02неправить.
+
+**Реализовано в кандидате:** общаяфото-карта20контактовSDK/shell/Doom/tester (UP39,
+RIGHT30,leftsoft33/rightsoft72,ENDunknown); новаяTCMESTMHZоценкаA/B,N/2N,3серии.
+72MODEL/PCгруппыPASS,обаpairedloader/FAT/app; ЭТОНЕhardware-retеst. exactCPUHz0,
+260MHzне доказаны. ФизическийaudioHAL/motor_setвсёещёunsupported; прежнийPMUprobe
+НЕощущался. Ключеваянаходка:stockmotoroverride идётвaudio/DSP,неgenericPMUfallback.
+
+**Не повторять закрытое исследование:** mainkernel1535504B и19DCMG223176B уже
+native-decoded/BCJпроверены; bootstrapDSPpatch,wakeup,PCMring,mappingвоспроизведены
+офлайн. ПолнаяstockOS/DSPнеbooted,realACK/analogrouteнет. StockDSPокнапересекают
+DoomBSS6728B/cache-регион:непереноситьадреса/старыеF0*/TCMвызовыlive.
+Следующийшаг:`research/hw/RESEARCH_NEXT_RU.md`. МузыкасSDещёнеinventoried;плеертолько
+preparedmono16WAVизKDATA.PAK,произвольныеSDtracks/MP3неподдержаны. PrivateDSPstock
+blobsНЕвSDK/публичныйпакет. Ниже—историяипостоянныеограничения; этотcheckpointновее.
+
+## Стоковый плеер: ДИНАМИК телефона без наушников слышен — 2026-11-20T13:52:01.927837+05:00
+
+На прямой вопрос «Трек в плеере слышен именно из динамика телефона, без наушников?»
+пользователь ответил «Да, в плеере всё впорядке». USER_REPORTED,не инструментальный замер.
+Положительный ориентир аудио: stock player -> phone speaker без наушников.
+Snake audio остаётся NOT_AUDIBLE/причина неизвестна; наличие настроек не success.
+Snake vib ранее USER_REPORTED_PRESENT; customHW0.2 vibFAIL,customPCM отсутствует.
+Evidence:C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\stock_player_speaker_observation_20261120_135201\observation.json
+Не считать stockspeaker success найденным PCM/routing/init драйвером.
+0USB/NOR/SD операций; установлен STOCK. Старые writers SPENT,готовность не обновлена.
+
+## ПОСЛЕДНЕЕ уточнение: змейка НЕ слышна; звук ориентир ПЛЕЕР — 2026-11-20T13:50:55.419514+05:00
+
+Пользователь:«Очень странно, но звук в змейке не работает, хотя он должен был быть».
+Предыдущее утверждение snakeaudio success отозвано; наличие меню Sound/Volume
+НЕ доказательство слышимого звука. Причина неизвестна,не угадывать.
+Player audio ранее слышен; Snake vib ранее ощущается — в этом сообщении не retest.
+Evidence:C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\stock_snake_audio_correction_20261120_135055\observation.json
+В качестве положительного аудиопримера использовать плеер,не змейку.
+Speaker/headphones route пока не уточнён. CustomPCM отсутствует,customvibFAIL.
+0USB/NOR/SDдействий; currentNORauthority по последнему чтению не менялась.
+
+## Уточнение стока: змейка ЗВУК+ВИБРО; настройки on/off и громкость — 2026-11-20T13:45:00.062665+05:00
+
+Последнее прямое сообщение пользователя: в играх найдены настройки; у змейки
+есть звук И вибро, их можно выключать; там же регулируется громкость.
+Это актуальная USER_REPORTED проверка, заменяет промежуточное «звука нет»
+и «вибро неизвестно». Аудиоплеер также ранее слышен по отчёту пользователя.
+Evidence:C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\stock_game_settings_observation_20261120_134500\observation.json
+Мотор и аудиовывод работают в стоке по сообщению пользователя; speaker/headphones
+route не указан. Наш HW0.2 мотор всё ещё FAIL_NO_FELT_VIBRATION, PCM не реализован.
+Не считать стоковую работоспособность найденной init/route/PCM последовательностью;
+не называть конкретный регистр неверным без дальнейшего доказательства.
+0device operations сейчас, SD/NOR не менялись. Установлен STOCK; lastverified834bf…1fd85
+не свежий baseline после работы стока. Старые writersSPENT,не запускать.
+
+## Сток: звук змейки и плеера подтверждён пользователем; вибро ещё не отвечено — 2026-11-20T13:41:18.682944+05:00
+
+Прямая цитата:«При проигрыше в змейке звук есть в аудиоплеере звук есть (при проигрывании трека)».
+Evidence:C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\stock_audio_observation_20261120_134118\observation.json
+Stock boot + audioSnake/player USER_REPORTED,не независимый инструментальный замер.
+НЕ считать это ответом про вибро:его ещё нужно уточнить. Speaker/headphones route не указан.
+Custom PCM по-прежнему отсутствует; stockaudio не доказывает наш драйвер/stockinit sequence.
+0USB/NOR/SD операций. Lastverifiedstock834bf…1fd85 не свежий live baseline после stockboot.
+
+## Сток для проверки змейки ЗАПИСАН; полный NOR audit PASS — 2026-11-20T13:39:17.114071+05:00
+
+Stock original code восстановлен только[B000,F000),не fullNOR restore.
+Same-session freshbefore117cac…3b9aa -> hardware fullafter
+834bf1dc728d27d4b77242ea1b943fd0d0ba73fafe4376ab24a5194d4dd1fd85.
+85offline+dryrun,independent all4194304bytes overlay/outer/NV audit PASS.
+Trial stock_restore_for_vibration_20261120_133255 SPENT;не rerun.
+Нет reset/FINISH/retry/reconnect/control;SD/PLAT/KDATA/WAD не изменялись.
+Report:C:\Users\USER\Documents\Codex\2026-11-18\new-chat\outputs\kenshi_stock_for_vibration_20261120_133847\REPORT_RU.md
+NEXT разрешён ручной USB-off/battery-in/normalpower. Проверить именно родную
+змейку при проигрыше; при наличии включить game sound/vibration; отдельно
+сообщить вибро и звук. Стоковое физическое вибро пока НЕ доказано.
+Установлена сейчас STOCK,не HW0.2. После stockboot NV может измениться;
+перед следующим writer новый freshread+review baseline,не auto-repin.
+
+## Stock Snake vibration cross-check prepared NOT launched — 2026-11-20T13:35:26.572305+05:00
+
+Пользователь вспоминает:в стоковой змейке при проигрыше «вроде бы» вибрировало;
+предлагает вернуть сток и проверить. Это НЕ новое подтверждение мотора.
+NEW unconsumed trial: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\stock_restore_for_vibration_20261120_133255. 85unit+dryrun PASS,0USB/NOR/card actions.
+Base117cac…3b9aa -> expectedstock834bf…1fd85 (НЕ readback). Только[B000,F000).
+Current pointer:work/current_stock_vibration_check.json; helpers:C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\stock_vibration_check_20261120_133255.
+NEXT свежий ручной USB-off/battery-out/USB-in безкнопок и ответ пользователя.
+USB0E8D:0003present сегодня сам по себе НЕ доказательство cold readiness.
+Только после ответа записать authorization.fresh_hardware_readiness_report,
+запустить НОВЫЙ launch_stock_vibration_once.py --user-authorized-platform-install
+один раз; затем audit_stock_vibration.py. Standard coldBootROM->originalDA,
+same-session geometry/full-before equality доD3/D5/full-after+outeraudit.
+Никаких retry/reset/FINISH/fallback/auto-repin. Все старые writersSPENT.
+SD/PLAT/KDATA/WAD не трогать; на стоке проверить змейку при проигрыше,
+при наличии включить game sound/vibration; отдельно спросить фактические звук/вибро.
+NOR HW0.2 пока остаётся установленной117cac…3b9aa,звук/вибро не объявлятьготовыми.
+
+## HW0.2 runtime фото: NO VIB; CPU lowerbound7;20key contacts — 2026-11-20T13:28:11.226969+05:00
+
+Observation: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\hw02_runtime_observation_20261120_132811\observation.json
+Key evidence: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\hw02_runtime_observation_20261120_132811\captured_key_contacts.json
+Пользователь «Вибро нет». MOTOR0C22/8C23/0C22 EN CLEARED — физический FAIL,
+не успехhaptic. Наличие/стоковая работоспособность мотора неизвестны.
+CPU MIN MHZ7 НЕ точная частота;B621/1401/0288,26MHZ NOT RULED.
+Loop обычнаяRAM.text0x15480,неTCM. PLL/cache/вольтаж не менялись.
+20unique rawcontacts;UP39,RIGHT30,softL33,softR72,CALL24;END-- не угадана.
+Старая карта не исправлена,photo10overlap проигнорирована; ясные дубли есть.
+PCM NO SINK/SPK0030: рабочий звук отсутствует. Profilegamezeros не0FPS.
+Runtime diagnosticsUI observed; не весь launcher/Doom/медиа retest.
+NOR authority117cac…3b9aa неизменна;0USB/SD/NOR operationsв этом отзыве.
+Старые writersSPENT; свежего подтверждения готовности устройства нет.
+
+## HW0.2 DOOM записана; полный NOR/PT_LOAD audit PASS — 2026-11-20T13:20:46.187289+05:00
+
+Installed authority current_installed_firmware.json. Readback117cac003a9327d9fb72eeda6a40fcf48204c95376d54c30d12b0896e693b9aa.
+Trial C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw02_cold_trial_20261120_131504 SPENT,НЕ rerun. Только[B000,F000),outer/NV сохранены.
+No reset/FINISH/retry/reconnect. Ручной USB-off/battery-in/normal-coldboot разрешён.
+Runtime ещё НЕ наблюдался; DIAGNOSTICS MOTOR50ms/CPU lowerbound/KEYS ожидаются.
+Рабочего PCM нет,exactCPUHzunknown. Frozen pair и sealed parents не изменены.
+Report: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\outputs\kenshi_hw02_written_20261120_132046\REPORT_RU.md. Исторические статусы ниже не текущая authority.
+
+## HW0.2 fresh baseline reviewed; writer prepared NOT launched — 2026-11-20T13:15:58.364891+05:00
+
+READ-ONLY capture hw02_post_card_readonly_20261120_131322 PASS:4MiB SHA
+834bf1dc728d27d4b77242ea1b943fd0d0ba73fafe4376ab24a5194d4dd1fd85.
+Независимо проверено:7028 изменённых байт только NV blocks943,947,948;
+код[0,389000) совпадает сток/архив. Нет D3/D5/reset/FINISH/retry.
+Installed pointer обновлён на reviewed STOCK baseline, НЕ HW0.2.
+NEW one-use trial: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw02_cold_trial_20261120_131504. 87tests+dryrun+launcher offline gates PASS.
+Pins: image4e8e3570…453c9; patche67bb990…c862b; expected117cac00…3b9aa (НЕ readback!).
+Физический writer НЕ запускался; authorization не потреблена.
+NEXT нужен ручной USB-off/USB-in БЕЗ батареи/кнопок ПОСЛЕ этого read-only capture.
+Fresh_manual_USB_cycle_report сейчас WAITING_MANUAL_USB_CYCLE_AFTER_READONLY;
+заменить только после нового пользовательского подтверждения готовности.
+Launcher: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\hw02_install_20261120_125942\launch_hw02_cold_once.py --execute-user-directed-once
+Только cold BootROM->original DA, без --use-existing-da/fallback. Same-session
+geometry/full-before equality передD3/D5; full-after+independent audit обязательно.
+После запуска нужен НОВЫЙ independent hardware audit для frozen flat pair;
+старый audit_platform_cold_written_v2.py содержит pins0.1/package layout49 и НЕ подходит.
+Не менять frozen pair/подготовленный source/evidence; baseline-review указывает physical_capture,
+а путь raw = physical_capture/full_capture.bin (не полеfull_verified_acquisition).
+Состояние/карта/пути: current_hw02_trial.json, current_hw02_post_card_capture.json,
+current_hw02_install.json, current_hw02_card_copy.json. Старые trials SPENT.
+
+## HW0.2: SD обновлена, сток остаётся — 2026-11-20T13:11:25.173778+05:00
+
+Свежая identity MINI_2 USB disk1/15635841024B FAT32 D: проверена перед/после.
+Изменён ТОЛЬКО PLAT.ELF406496 SHA7b109db125e409c294301cc73a4af58155124846e0e06dc2ada5403d34df2695;
+WriteThrough/Flush(true)/close/reopen full SHA PASS. Прежний PLAT сохранён на ПК.
+DOOM.ELF/WAD/KDATA неизменны по полным SHA. Форматирования/host block операций нет.
+Frozen deployment pair (не публичный release): C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\hw02_install_20261120_125942\frozen_doom_pair.
+Согласованный новый loader13964 SHA4e8e3570214212e6bde55ea58af856711ccf263243b63c795ff5d661889453c9.
+В NOR пока СТОК, last verified61b471…f0c96; stock boot мог изменить NV.
+NEXT ручной USB-off/телефон-off/battery-out/USB-in без кнопок; новый read-only capture
+через стандартный cold BootROM->DA и независимый review NV. Старую базу не auto-repin.
+Затем НОВЫЙ cold one-use writer только[B000,F000), same-session geometry/full4MiB
+before equality и full4MiB after/independent PT_LOAD+outer/NV audit. Старые trials SPENT.
+Аудио пока отсутствует; CPU exact unknown, motor/key diagnostics physical unverified.
+Card report: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\hw02_install_20261120_125942\card-copy-result.json
+
+## Сток для обновления SD восстановлен — 2026-11-20 13:01 +05:00
+
+Новая одноразовая stock trial stock_restore_for_platform_20261120_125942 SPENT.
+Fresh same-session before c536e743…e7acd8; полный readback61b471300eaf712a12c63de4530516c0fbd097ea5afdfbc8bd0a70d5d19f0c96.
+85offline tests + independent all4MiB overlay/outer/NV audit PASS. Только[B000,F000).
+Нет reset/FINISH/retry; current_installed_firmware.json обновлён на STOCK_CODE_RESTORED.
+NEXT пользователь отключает USB, вставляет батарею, запускает сток, подключает
+USB-накопитель. Карта ещё НЕ идентифицирована/НЕ изменялась. Нужен новый PLAT.ELF
+из platform_hw_20261120_115700 doom + согласованный новый loader; кандидат пока unsealed.
+После стокового запуска fresh read/review NV baseline перед новым cold writer.
+Не запускать старые SPENT writers. Рабочий PCM отсутствует.
+Отчёт: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\outputs\kenshi_stock_for_platform_20261120_130117\REPORT_RU.md
+
+## Новый hardware-first кандидат0.2 — 2026-11-20T12:50:35.204692+05:00
+
+Код/продолжение: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700 (UNSEALED, можно продолжать здесь).
+Отчёт: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700\REPORT_HW_PRIORITY_RU.md.
+Указатель: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\current_hw_diagnostics_candidate.json.
+62 MODEL/PC группы PASS + обе paired ARM loader/app модели (doom20frames),
+PT_LOAD/layout/budget и sealsV11/V12/0.1 PASS. Новые source/header тестируются
+-Werror; README/HW_DIAGNOSTICS_RU описывают exact limitations.
+Мотор: явный blocking50ms probe с in-call cleanup/stall guard, voltage сохранён;
+НЕ асинхронный haptic HAL/автономный one-shot/доказанное физическое движение.
+CPU:3x1048576 ADD lower-bound относительноGPT26M, НЕ exactMHz; PLL/cache не трогает.
+Keys:21-step EXPECT/DETECTED/contact/press/hold/release, RAM-only, NO auto-remap.
+Профиль: игровые UPDATE/CONVERT/LCD snapshots, НЕ обещание приростаFPS.
+Звук PCM ещё НЕ реализован. НОВОЕ: ALICE_2 декодирован1328768B,10381 boundary+
+length checks; stockAFE/DSP slice4cases MODEL PASS. Virtual mapping/kernelDCMG
+ещё неизвестны; не вызывать F0*/TCM veneers. Исследование/next:
+C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700\research\hw\RESEARCH_NEXT_RU.md.
+Private decoded .bin НЕ включать в SDK/пакет. StandardLZMA/75property sweep
+отрицательные — не повторять без нового основания; смотреть native decoder/GFH.
+0device operations/0writer; установленная0.1 DOOM c536e743…e7acd8 не менялась.
+Это ещё НЕ sealed release package. Физическая готовность неизвестна; старые
+SPENT trials не повторять, свежий live baseline не получен.
+
+## Приоритет пользователя: звук/вибро/CPU, затем keys, затем FPS — 2026-11-20T11:57:02.049658+05:00
+
+Текстовый отчёт: платформа работает, Doom иногда показывает >50FPS. Это не внешний
+замер FPS/CPU и не подтверждение каждого приложения. NOR authority остаётсяc536e743...e7acd8.
+Новая НЕ sealed рабочая копия C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700; parent670files/seal проверен, исходники не изменены.
+Приоритет1: реальный PCM sink, безопасный board motor, доказательства clock chain.
+Приоритет2: интерактивный key tester с expected/detected/raw/press/release, без угадывания mapping.
+Приоритет3: профилирование/оптимизация. Сейчас0device operations, нет свежей готовности к записи.
+
+## ПЛАТФОРМА0.1 DOOM ЗАПИСАНА; full NOR/PT_LOAD проверены — 2026-11-20T11:49:08.058946+05:00
+
+Текущая installed authority: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\current_installed_firmware.json.
+NOR SHA256 c536e743206fa8923a75c565afd758f43bd7a69ecb24949820e6c236c3e7acd8. New trial C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_doom_cold_trial_20261120_114510 SPENT; НЕ rerun/auto-repin.
+Только[B000,F000), fresh same-session geometry+full4MiB before; full4MiB after
+побайтовый overlay/outer/NV/bootloader/ELF PT_LOAD audit PASS.
+Стандартная BootROM->DA initialization выполнена в этой же успешной writer-сессии;
+87offline tests PASS; --use-existing-da НЕ использовался; нет reset/FINISH/retry/reconnect/clear-halt.
+Карта PLAT.ELF400660 SHA9dbfc426aaf21023dfc48ca8ace87defae3271f1b80ee5bad657a6e164af9f10
+и KDATA.PAK833596 SHA38cf2146af721cc2fc1554e7cc24a7b90de4a1df252a34f0f76130c471b33caa
+full Flush/reopen hash PASS; старый DOOM.ELF/WAD сохранены.
+COLD BOOT ЕЩЁ НЕ НАБЛЮДАЛСЯ. Разрешён ручной USB-off/battery-in/power-on.
+Ожидается KENSHI PLATFORM; первым YOUR GAME, возврат, PHONE, VIDEO; Doom отдельно.
+MUSIC NO AUDIO DRIVER/VIDEO SILENT ожидаемо; физические звук/мотор/CPU MHz/исходныйIMEI не закрыты.
+Sealed SDK/V11/V12/package не изменены. Report C:\Users\USER\Documents\Codex\2026-11-18\new-chat\outputs\kenshi_platform_written_20261120_114908\REPORT_RU.md.
+
+## Platform writer STOPPED до стирания; требуется новый ручной USB заход — 2026-11-20T11:42:40.767282+05:00
+
+New platform trial C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_doom_trial_20261120_113806 SPENT. Первая B0 geometry дала
+unexpected reply b101010101 вместо000000005a. Отправлено5байт, принято5;
+D3/D5 НЕ отправлялись, full NOR в этой неудачной попытке НЕ читался.
+Не было reset/FINISH/retry/reconnect/clear-halt/rollback; причина ответа НЕ доказана.
+Новая платформа НЕ записана. Последний verified stock NOR61b471300eaf712a12c63de4530516c0fbd097ea5afdfbc8bd0a70d5d19f0c96.
+Карта PLAT.ELF/KDATA.PAK ранее fullhash verified, старый WAD/DOOM.ELF сохранены.
+NEXT: пользователь вручную отключает/подключает USB без аккумулятора.
+Только НОВАЯ one-use trial со штатной BootROM->DA initialization, не --use-existing-da;
+перед D3/D5 live geometry+full4MiB equality с reviewed baseline. Не авто-fallback.
+Audit C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_doom_trial_20261120_113806\independent-stopped-audit.json.
+
+## Карта новой платформы проверена; stock остаётся — 2026-11-20T11:33:37.9868410+05:00
+
+User: «Всё, делай». Fresh OS inventory: USB MINI_2 disk1, 15635841024B,
+FAT32 partition offset4194304/size15631646720, nonboot/nonsystem; observed D: (НЕ предполагать в будущем).
+Только PLAT.ELF400660 SHA9dbfc426aaf21023dfc48ca8ace87defae3271f1b80ee5bad657a6e164af9f10
+и KDATA.PAK833596 SHA38cf2146af721cc2fc1554e7cc24a7b90de4a1df252a34f0f76130c471b33caa
+созданы через CreateNew/WriteThrough/Flush(true), закрыты и fullhash reopened PASS.
+Сохранены DOOM.ELF/WAD, их SHA прежние. Без форматирования/host-block операций.
+Отчёт: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_install_20261120_112607\card-copy-result.json. Copy claim SPENT; НЕ rerun.
+Сейчас stock bbb880...67d7 по последней NOR-проверке; stockboot мог изменить NV.
+Новая платформа ЕЩЁ НЕ записана. Ждём ручной USB-off, poweroff, battery-out, USB-on.
+Новый read-only capture helper подготовлен, НЕ запущен; затем независимый review
+нового baseline и НОВЫЙ one-use paired doom-platform loader writer, только[B000,F000).
+
+## Установка платформы: временный stock проверен — 2026-11-20T11:29:48.999538+05:00
+
+Свежая команда пользователя: «Накатывай чумба». Выбран integrated **doom** flavour
+(самостоятельная игра первым пунктом). Все1281 sealed-файла пакета/ночной копии/V11/V12 проверены без изменения.
+НОВАЯ одноразовая bounded-stock проба85 offline tests+DryRun PASS; физически выполнена ОДИН раз.
+Fresh before8b6188...09; full after `bbb880755be74317e74f45c2234b062906a0bca68bc02e6d61c7ff35586e67d7`; все4194304 байта
+побайтово проверены, только sectors11..14, outer/NV/bootloaders сохранены. Ноль reset/FINISH/retry.
+**Сейчас установлен stock; новая платформа ЕЩЁ НЕ записана, карта НЕ скопирована.**
+Ждём ручной cold boot с батареей и stock USB mass storage microSD; затем fresh identity,
+только PLAT.ELF/KDATA.PAK, сохранить DOOM.ELF/WAD/остальное. Новый helper allowlist syntax-checked, не запущен.
+После stockboot — новый read-only baseline и review NV, новый one-use парный loader writer.
+Текущий install pointer: `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\current_platform_installation.json`. Stock writer SPENT — не rerun.
+
+﻿## Реализованная offline-платформа — 2026-11-20T02:07:33.332358+05:00
+
+Это актуальный checkpoint; пункты ниже, написанные19ноября, — исходный план/история.
+- Новый самостоятельный SDK/launcher/phone UI/WAV+KVID software и конвертер реализованы.
+- Ночная рабочая копия: `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_mvp_20261120_005032`. Дальнейшие изменения после seal — только новая копия.
+- Передаваемый проверенный пакет: `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\outputs\kenshi_platform_0_1_offline_20261120_020525`. **НЕ установлен**, на устройстве остаётсяV11.
+- Указатели: `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\current_platform_candidate.json` и `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\current_platform_development.json`.
+- Быстрый результат: `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\NIGHT_PLATFORM_RESULT_RU.md`; подробный отчёт: `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\outputs\kenshi_platform_0_1_offline_20261120_020525\REPORT_PLATFORM_RU.md`.
+-30ARM SDK groups,2paired loader/FAT/app models,15виртуальных минут lifecycle,
+  independent source ZIP безDoom/WAD отдельно собран bitexact. Это НЕ hardware tests.
+- **Не закрыты:** физический PCM/speaker, мотор, доказанная CPU frequency,
+  исходныйIMEI, новая прошивка/видео на настоящем телефоне, неоднозначныйphysicalUP.
+  См. CAPABILITIES.json / docs/HARDWARE_BLOCKERS_RU.md.
+-0USB/card/NOR операций, writer не создан/не запущен. Новые имена PLAT.ELF/KDATA.PAK
+  требуют парный новый loader и отдельный freshly-reviewed card allowlist/one-use attempt.
+
+# Текущая задача: платформа Kenshi Mini 2
+
+Пользователь уточнил: Doom — тестовый полигон, основная цель — переиспользуемая игровая платформа и SDK для своей игры. Целевой день MVP при планировании — 20 ноября 2026 года (Asia/Yekaterinburg), не гарантия срока.
+
+Новый целевой состав включает launcher игр с возвратом, телефонный демонстрационный режим (любой номер + вызов → исходный IMEI), музыкальный и видеоплеер. Простое меню входит в MVP. Сотовая связь/универсальные кодеки не обещаны; IMEI/NV не менять.
+
+Перед продолжением прочитать:
+- `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\PLATFORM_PLAN_RU.md`;
+- `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\CONTINUE_PLATFORM_PROMPT_RU.md`;
+- `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\FIRMWARE_MVP_SCOPE_RU.md`;
+- актуальные указатели состояния в `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work`, перечисленные в плане.
+
+Перед любыми действиями с устройством прочитать актуальные инструкции в:
+- `C:\Users\USER\Documents\Codex\2026-11-16\senior-embedded-c99-developer-reverse-engineer\AGENTS.md`;
+- `C:\Users\USER\Documents\Codex\2026-11-16\senior-embedded-c99-developer-reverse-engineer\PHONE_OPERATION_RU.md`.
+
+Запечатанные V11/V12 и исследования не редактировать/не пересобирать; новый код — отдельная рабочая копия с происхождением. Текущая аппаратная готовность не следует из прошлых разрешений. Физические writer и форматирование не запускать при чтении этого плана.
+
+С пользователем говорить кратко, по-русски и прямо. Не выдавать программный PCM/PMIC readback/модельные тесты за подтверждённый звук или мотор. Не утверждать 260 MHz без доказательств. SDK должен включать пример без линковки Doom и реальные статусы возможностей.

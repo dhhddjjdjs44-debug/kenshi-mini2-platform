@@ -1,0 +1,29 @@
+{
+  "provenance": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\hw02_runtime_observation_20261120_132811\\observation.json",
+  "numeric_base": 10,
+  "contacts": {
+    "UP": 39,
+    "DOWN": 15,
+    "LEFT": 21,
+    "RIGHT": 30,
+    "OK": 42,
+    "LEFT_SOFT": 33,
+    "RIGHT_SOFT": 72,
+    "CALL": 24,
+    "END": null,
+    "1": 27,
+    "2": 0,
+    "3": 51,
+    "4": 12,
+    "5": 13,
+    "6": 57,
+    "7": 6,
+    "8": 9,
+    "9": 48,
+    "*": 3,
+    "0": 45,
+    "#": 54
+  },
+  "status": "PHOTO_CAPTURED_NOT_YET_APPLIED",
+  "END_UNRESOLVED": true
+}

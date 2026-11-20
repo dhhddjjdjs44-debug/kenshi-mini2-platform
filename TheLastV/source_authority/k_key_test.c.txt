@@ -1,0 +1,92 @@
+#include "k_key_test.h"
+#include "k_platform.h"
+#include <string.h>
+static unsigned active(const uint16_t raw[5], unsigned bit) {
+    return ((uint16_t)~raw[bit / 16u] >> (bit % 16u)) & 1u;
+}
+const char *k_key_test_expected(unsigned i) { return k_key_name(i); }
+const char *k_key_test_detected(unsigned contact) { return k_contact_name(contact); }
+void k_key_test_begin(struct k_key_test *t, uint32_t now) {
+    memset(t, 0, sizeof(*t));
+    memset(t->contact, K_CONTACT_NONE, sizeof(t->contact));
+    memset(t->raw, 0xff, sizeof(t->raw));
+    memset(t->last_raw, 0xff, sizeof(t->last_raw));
+    t->candidate = t->detected = K_CONTACT_NONE;
+    t->idle_at = now;
+}
+static void result(struct k_key_test *t, uint32_t why, uint32_t now) {
+    t->result = why;
+    t->result_at = now;
+    t->phase = K_KEY_RESULT;
+    t->candidate = K_CONTACT_NONE;
+}
+void k_key_test_poll(struct k_key_test *t, const uint16_t raw[5], uint32_t now) {
+    unsigned i, count = 0u, single = K_CONTACT_NONE;
+    uint32_t chord = active(raw,45u) && active(raw,54u);
+    memcpy(t->raw, raw, sizeof(t->raw));
+    for (i = 0; i < 80u; ++i)
+        if (active(raw,i)) { ++count; single = i; }
+    t->held_count = count;
+    if (count) {
+        memcpy(t->last_raw, raw, sizeof(t->last_raw));
+        t->detected = count == 1u ? single : K_CONTACT_NONE;
+    }
+    /* An explicit 0+# chord is handled RAW, not through a possibly wrong BACK.
+     * Short chord skips a missing contact; hold1.2s exits. No other app controls
+     * run during capture, so measuring BACK/CALL/OK cannot leave the tester. */
+    if (chord) {
+        if (!t->chord) { t->chord = 1u; t->chord_at = now; }
+        if ((uint32_t)(now - t->chord_at) >= 1200u)
+            t->exit = 1u;
+        t->candidate = K_CONTACT_NONE;
+        return;
+    }
+    if (t->chord) {
+        if (count)
+            return;
+        t->chord = 0u;
+        if (t->phase != K_KEY_DONE)
+            result(t,K_KEY_SKIPPED,now);
+        return;
+    }
+    if (t->phase == K_KEY_DONE) {
+        if (count && !t->previous_down) {
+            if (active(raw,9u)) t->review = (t->review + 4u) % K_KEY_TEST_COUNT;
+            else if (active(raw,0u)) t->review = (t->review + K_KEY_TEST_COUNT - 4u) % K_KEY_TEST_COUNT;
+        }
+        t->previous_down = count;
+        return;
+    }
+    if (t->phase == K_KEY_IDLE) {
+        if (count) { t->idle_started = 0u; return; }
+        if (!t->idle_started) { t->idle_at = now; t->idle_started = 1u; }
+        if ((uint32_t)(now - t->idle_at) >= 80u)
+            t->phase = K_KEY_PRESS;
+    } else if (t->phase == K_KEY_PRESS && count) {
+        t->candidate = count == 1u ? single : K_CONTACT_NONE;
+        t->result = count == 1u ? K_KEY_NONE : K_KEY_MULTIPLE;
+        t->phase = K_KEY_HELD;
+    } else if (t->phase == K_KEY_HELD) {
+        if (count > 1u)
+            t->result = K_KEY_MULTIPLE;
+        else if (count && single != t->candidate && t->result == K_KEY_NONE)
+            t->result = K_KEY_CHANGED;
+        if (!count) {
+            uint32_t why = t->result;
+            if (!why) {
+                why = K_KEY_RECORDED;
+                for (i = 0; i < t->expected; ++i)
+                    if (t->contact[i] == t->candidate) why = K_KEY_DUPLICATE;
+                if (why == K_KEY_RECORDED)
+                    t->contact[t->expected] = (uint8_t)t->candidate;
+            }
+            result(t,why,now);
+        }
+    } else if (t->phase == K_KEY_RESULT && !count &&
+               (uint32_t)(now - t->result_at) >= 600u) {
+        if (t->result == K_KEY_RECORDED || t->result == K_KEY_SKIPPED)
+            ++t->expected;
+        t->phase = t->expected == K_KEY_TEST_COUNT ? K_KEY_DONE : K_KEY_IDLE;
+        t->idle_started = 0u;
+    }
+}

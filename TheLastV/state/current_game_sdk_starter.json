@@ -1,0 +1,29 @@
+{
+  "status": "VERIFIED_PC_GAME_DEVELOPMENT_STARTER_NOT_HARDWARE_RELEASE",
+  "root": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\outputs\\kenshi_game_sdk_start_20261120_170604",
+  "source_root": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\outputs\\kenshi_game_sdk_start_20261120_170604\\sdk",
+  "archive": {
+    "file": "Kenshi_SDK_independent_sources.zip",
+    "sha256": "00502c61cbe5d1a4fa335d3404910c5e569e708017a7d98d0e5d2f460a377b85",
+    "bytes": 292144,
+    "files": 96,
+    "includes_doom": false
+  },
+  "physical_operations": 0,
+  "hardware_complete": false,
+  "phone_installed": false,
+  "copied_from_unsealed_development": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\platform_hw_20261120_115700",
+  "source_guide": "sdk/docs/START_GAME_RU.md",
+  "updated_at": "2026-11-20T17:15:19.011950+05:00",
+  "independent_source_build": true,
+  "documented_PowerShell_command_headless_tested": true,
+  "independent_extracted_SDK_groups": 70,
+  "development_full_groups": 78,
+  "optional_Doom_source_check_skipped_only_in_independent_export": true,
+  "sdk_sources_user_editable": true,
+  "hardware_audio": false,
+  "hardware_vibration": false,
+  "CPU_frequency_measured": false,
+  "device_writes": 0,
+  "installed_authority_unchanged_sha256": "20ea1983d9fdac376ecda2fb0a8fe4450d6783dcfe98aec95e86d55f5a66e731"
+}

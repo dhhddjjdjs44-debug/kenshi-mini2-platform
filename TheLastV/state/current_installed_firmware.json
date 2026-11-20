@@ -1,0 +1,38 @@
+{
+  "status": "VERIFIED_SAME_SESSION_FULL_NOR_NO_RESET",
+  "firmware": "STOCK_CODE_RESTORED_CURRENT_NV_PRESERVED",
+  "verified_at": "2026-11-20T13:38:47.800897+05:00",
+  "full_nor_sha256": "834bf1dc728d27d4b77242ea1b943fd0d0ba73fafe4376ab24a5194d4dd1fd85",
+  "full_verified_acquisition": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\stock_restore_for_vibration_20261120_133255\\sessions\\attempt_20261120_133745_368923\\full_after.bin",
+  "physical_session": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\stock_restore_for_vibration_20261120_133255\\sessions\\attempt_20261120_133745_368923",
+  "prewrite_base_sha256": "117cac003a9327d9fb72eeda6a40fcf48204c95376d54c30d12b0896e693b9aa",
+  "allowed_write_range": [
+    45056,
+    61440
+  ],
+  "all_bytes_equal_expected_overlay": true,
+  "all_protected_outer_bytes_unchanged_vs_same_session_fresh_before": true,
+  "changed_4K_blocks": [
+    11,
+    12,
+    13,
+    14
+  ],
+  "stock_code_region_matches_original": true,
+  "manual_normal_cold_boot_allowed": true,
+  "runtime_boot_NOT_YET_observed": false,
+  "Doom_NOT_installed": true,
+  "report": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\outputs\\kenshi_stock_for_vibration_20261120_133847\\REPORT_RU.md",
+  "audit": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\outputs\\kenshi_stock_for_vibration_20261120_133847\\audit.json",
+  "writer_authorization_consumed": true,
+  "no_rerun_without_new_explicit_authorization": true,
+  "stock_OS_boot_can_change_NV_then_new_fresh_base_is_required": true,
+  "runtime_stock_boot_user_reported": true,
+  "stock_audio_snake_loss_user_reported": false,
+  "stock_audio_player_track_user_reported": true,
+  "stock_vibration_status": "USER_REPORTED_PRESENT_IN_STOCK_SNAKE",
+  "stock_runtime_observation": "C:\\Users\\USER\\Documents\\Codex\\2026-11-18\\new-chat\\work\\stock_player_speaker_observation_20261120_135201\\observation.json",
+  "stock_snake_game_settings_sound_vibration_and_volume_user_reported": true,
+  "stock_audio_snake_status": "USER_REPORTED_NOT_AUDIBLE_CAUSE_UNKNOWN",
+  "stock_audio_player_output_route": "PHONE_SPEAKER_WITHOUT_HEADPHONES_USER_REPORTED"
+}

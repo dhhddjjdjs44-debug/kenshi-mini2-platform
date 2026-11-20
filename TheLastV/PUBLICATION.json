@@ -1,0 +1,413 @@
+{
+  "at": "2026-11-20T17:52:53.862656+05:00",
+  "edition": "PUBLIC_DOCUMENTATION_ONLY",
+  "source_bundle_name": "TheLastV",
+  "original_local_bundle_unchanged": true,
+  "upstream_manifest_sha256": "0cb152daa9ca14b9e3c4ca0589f4ca97728ee8d992bc1872abcee32f25fe565e",
+  "upstream_validation_sha256": "920107cfd96e915e4042822bad72e48c1ad327dfa11c0c221d434654bfb995ff",
+  "account_placeholder": "USER",
+  "account_path_replacements": 980,
+  "path_redaction_records": [
+    {
+      "file": "01_CURRENT_STATE_RU.md",
+      "local_account_path_replacements": 3,
+      "local_bundle_sha256": "0b3f0ab7a756a7da15d749492ec18de547cdd91909875e56719a9df2e5969b94",
+      "public_copy_sha256": "c7a4597b218b4d898f4d4f83b53028ba16472a211384e150f097b040889a6f74"
+    },
+    {
+      "file": "06_SDK_GAME_DEVELOPMENT_RU.md",
+      "local_account_path_replacements": 4,
+      "local_bundle_sha256": "b17f0b4e8f50587e512022ca2f89dfc0a68774d197e0b10f94a857bd259e52a9",
+      "public_copy_sha256": "d144859d79837d9b42a36c1255062aed2939c970afc930fc842db8e5342ffc6d"
+    },
+    {
+      "file": "08_FLASH_AND_RESTORE_RU.md",
+      "local_account_path_replacements": 2,
+      "local_bundle_sha256": "b4a6132bdfc60beb503da98d5f2814fe1874cf12bf939ab7a7fa8cdf53d486b0",
+      "public_copy_sha256": "11792b24f88f073c5907f522b04a33c53c4f381a7caa25cb30ec62d586eb4e6a"
+    },
+    {
+      "file": "10_HANDOFF_RU.md",
+      "local_account_path_replacements": 4,
+      "local_bundle_sha256": "779a9195d0fb97e614b47a71e27006734690a84eee0f89a29510137f81a79244",
+      "public_copy_sha256": "600ea97620b2b98d64df88ee83a2f3f5357cc9759b9068e37158b08583869786"
+    },
+    {
+      "file": "originals/development/AGENTS.source.txt",
+      "local_account_path_replacements": 7,
+      "local_bundle_sha256": "f1d3c247a4358ca419da6d130b2505c56274d145a3b775abbcb67b01424fea7b",
+      "public_copy_sha256": "441719bc0be8cdd1db69eb0c54169343302feda92b224939389775a088a7e1ad"
+    },
+    {
+      "file": "originals/development/docs/MORNING_TEST_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "d6387862cd79975dd192320a38de808c0387d52ad325aeaa324aa06aa1483151",
+      "public_copy_sha256": "15c3b3b943c914e04c2da15659e7f3355ccc03707a9348cd53e29f721dc35cd9"
+    },
+    {
+      "file": "originals/development/REPORT_HW03_RU.md",
+      "local_account_path_replacements": 2,
+      "local_bundle_sha256": "bb91d4e8def88c18a27a23d097ecaa0bb3503e978be4008bd3f0a8a214dd79f2",
+      "public_copy_sha256": "41a06d16301560ca1fc449ce709d31c30104b8ba1237bec30be36ac4640fca6b"
+    },
+    {
+      "file": "originals/development/REPORT_HW_PRIORITY_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "f96ea7f22e8e020b4e2cb06b8412cfa1788cea9c8512fb845cf3e1a6e849b744",
+      "public_copy_sha256": "bc905c217bd7446781a8f4b4465f97149f7a01b136abdb0c0d9c97e665c08c63"
+    },
+    {
+      "file": "originals/hardware/AGENTS.source.txt",
+      "local_account_path_replacements": 169,
+      "local_bundle_sha256": "c9223710f7388b9286f6f5691b396cec857cd1b468e638a63a4f0ef7235ddb1e",
+      "public_copy_sha256": "f14f12e681d4c0fee20550955572730c138f980e2470308ddca39f74fd759305"
+    },
+    {
+      "file": "originals/hardware/PHONE_OPERATION_RU.md",
+      "local_account_path_replacements": 172,
+      "local_bundle_sha256": "960704a7ba664a773b71b13ab0302b3660ff8d028fbc0a22f7108a5e8786e26a",
+      "public_copy_sha256": "e249cc21b1cc8c74b6392d579871fe26d25f46adbf0d769ab9e0b286a6a68ff9"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_mini2_step1_report_complete_ru.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "8a2996e73046b6bab41ebeafb4efbdabebee45770c998f2bc8f2c6f7215bbdb1",
+      "public_copy_sha256": "bdf16e4eee9591c7fdf27f883c2fda7f3220c26894bab4016f94d0781b2d5f4a"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_nor_mismatch_20261117_144602/report_ru.md",
+      "local_account_path_replacements": 5,
+      "local_bundle_sha256": "f9d2c8b230e2836370777dd445f4ee5c53d6038d5d1c61ce4003eb401e489c24",
+      "public_copy_sha256": "d48569dd46b8216bfe4d42b4d75124e6aefa69bdeaba2c68bf5bfff3f82f69de"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_phone_check_20261116/report_ru.md",
+      "local_account_path_replacements": 4,
+      "local_bundle_sha256": "91ec2bea6b671fe93d6f9b6fb2f1e61be68e624fe0eae9dac3ac03b1df8e00c6",
+      "public_copy_sha256": "19b2a9c76f8bca7200f5b768f5c1a64971f7267e2df0f21603867baaa6910869"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_step2/docs/audio_trace.md",
+      "local_account_path_replacements": 5,
+      "local_bundle_sha256": "e95b375d87a8a7231992cac958ace62acca8b3b1fa711de93f03aa5da1623ebd",
+      "public_copy_sha256": "2fb7946b599360666e6df0549ceb8fb4658e7ebde3dcb4cbc6539b334eb0a787"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_step2/docs/sd_trace.md",
+      "local_account_path_replacements": 4,
+      "local_bundle_sha256": "ac212eb4727a4817ffc7f1ccad4ff36b87d19d0843c3f2be96e520b3eddb66fd",
+      "public_copy_sha256": "c4fcfd2f2532f9ae7fd55f1a7794b3782520e8f312ec3910b6babb1f0c68762c"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_step2/docs/step2_report_full_ru.md",
+      "local_account_path_replacements": 12,
+      "local_bundle_sha256": "7b5632e8e95e4b9fd5819d6cde5d379585d9bb83ebdbdc05020fd41afd12fb9e",
+      "public_copy_sha256": "704e98fe5c5d7889bdaf5dcc1979baacff7e667404b324489766abe449261f09"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_step2_report_ru.md",
+      "local_account_path_replacements": 12,
+      "local_bundle_sha256": "7b5632e8e95e4b9fd5819d6cde5d379585d9bb83ebdbdc05020fd41afd12fb9e",
+      "public_copy_sha256": "704e98fe5c5d7889bdaf5dcc1979baacff7e667404b324489766abe449261f09"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_d3fix_20261117/CURRENT_BOOTLIGHT_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "5e139fe271bec75effdba53c219dac4c1f4e2521ceea838d74153ad8499026cd",
+      "public_copy_sha256": "4a5e7f1aa2166ac551a907af18946a427ad3599d7efc685679993aa44f8ddd7c"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_d3fix_20261117/CURRENT_CLOCK_DIAGNOSTIC_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "5cd5ca8be2af374674d2b84176e1e467e25e5cb7e6911dd2f8222bd01fa024b2",
+      "public_copy_sha256": "479979fbe762da06da108c839d45c8f7dada956b3b3145fda0d30443b3a24f02"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_d3fix_20261117/CURRENT_CORE_DIAGNOSTIC_RU.md",
+      "local_account_path_replacements": 3,
+      "local_bundle_sha256": "9927a5767793bd6641d959bae48f69c9b905abc49000b68b853fe110b2da45e8",
+      "public_copy_sha256": "a316103f44acab10052afca8e9fd1af1b7645ca845abaf0a32a3d15edd902fb1"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_d3fix_20261117/CURRENT_EARLY_LCD_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "de455b6b40fad37102037a4ef9716f21a6ef2e2c2d75236ac58787910e8f26d5",
+      "public_copy_sha256": "de00115322fbb0592d4e3e2478d00a46f22905ba64045a7870bb7104dae4fa86"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_d3fix_20261117/CURRENT_KEYMAP_FIX_RU.md",
+      "local_account_path_replacements": 3,
+      "local_bundle_sha256": "56462c450aa22510e036f125c66bcadbf7d3fcb52c56bb1974895a3b98da5bfc",
+      "public_copy_sha256": "522995bad6127ee27a28a0fcb926d91513875d03ad2ba4a3d5c5ddbaf47bc75f"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_d3fix_20261117/CURRENT_KEYMAP_WRITTEN_RU.md",
+      "local_account_path_replacements": 3,
+      "local_bundle_sha256": "79d0a377ddd5b5e0c91c61ddd80216e0ecf22207b99b394a095ab92e26e0d5e4",
+      "public_copy_sha256": "618d25d6e637285d4bbfec752cbfec0003ab2b43f08b66b66d4e553ff6641c92"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_d3fix_20261117/CURRENT_POWERHOLD_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "c86ac1fa491ba159a71f4a9a719812ac5d5bca265bbc8e8f48ba11b7f634abb9",
+      "public_copy_sha256": "475dea01d1fc0843de39b220082be4465b6ae836c069ea112275dfa9a0f9da22"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_d3fix_20261117/D5_FRAMING_RU.md",
+      "local_account_path_replacements": 3,
+      "local_bundle_sha256": "4f575441cb2f75c4e14e740853cdbaa87608867584341f07d33f52d1ec5c6d72",
+      "public_copy_sha256": "d3633c45e0c63c4de0b9fe3cbe75b6ecccf55e37440432e01855c6d12b09c87a"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_d3fix_20261117/LATEST_STATUS_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "5cd5ca8be2af374674d2b84176e1e467e25e5cb7e6911dd2f8222bd01fa024b2",
+      "public_copy_sha256": "479979fbe762da06da108c839d45c8f7dada956b3b3145fda0d30443b3a24f02"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_trial_20261117/report_ru.md",
+      "local_account_path_replacements": 15,
+      "local_bundle_sha256": "1ee9f282ecceb001b6fca3ed84fd64d73586c8ac3ef1b0a393d440ca8615086c",
+      "public_copy_sha256": "434bc7cf393e6734195d888eb0466ac33e161f9c9dfaa290274e52de6eb5abb1"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_trial_20261117/wdt_status_fix_ru.md",
+      "local_account_path_replacements": 9,
+      "local_bundle_sha256": "9b676c3d6756bb1bb637851ae1405277174908356382b8a3479a1ba5c0a41e45",
+      "public_copy_sha256": "f7da917a70964160c309d69ae2fedce8f75029643b0fa896eadc729630d39d68"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_stock_da_trial_20261117/winusb_fix_ru.md",
+      "local_account_path_replacements": 10,
+      "local_bundle_sha256": "c6c58329f325edc329f2b92b38d9a3183a8a1d11bc828751f4121676bdd993e2",
+      "public_copy_sha256": "b8dcc24d62ad76bcddb172ac98a800d946dfb67e1c3af742b043aa47ebf1c6cf"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_tetris_bootfix_20261117/EARLY_LCD_REPORT_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "de455b6b40fad37102037a4ef9716f21a6ef2e2c2d75236ac58787910e8f26d5",
+      "public_copy_sha256": "de00115322fbb0592d4e3e2478d00a46f22905ba64045a7870bb7104dae4fa86"
+    },
+    {
+      "file": "originals/history/hardware_outputs/kenshi_tetris_bootfix_20261117/REPORT_RU.md",
+      "local_account_path_replacements": 3,
+      "local_bundle_sha256": "70229fd54ade668c4c2eb7ebac0fa04eed395cce0844c27bbfca2f8fde81eae6",
+      "public_copy_sha256": "8cd5cadf771fc0f7fc827af0bdc9cc59978b9436664afd2b5a1545882ae7d7fb"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_clk_v3_written_20261118_215525/REPORT_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "042fc412effab2bc2b61e41cdb0937657ae602f754c936afa29cf6fbfed0cd14",
+      "public_copy_sha256": "19b3ee50985a3ab66eca6f12798085ad4b0b171134f037c09124c0d42dbe6d1d"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_clock_diag_written_20261118_204100/REPORT_RU.md",
+      "local_account_path_replacements": 4,
+      "local_bundle_sha256": "fa40ab1099774797b4bd315574af341ee036183ae6a7cc97d27b235e614eee06",
+      "public_copy_sha256": "cbe51c5fbc5c7491e0437ca0154522033d4c773d186ade7684f333fcf86644bc"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_critical_diag_20261118/BUILD_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "576108a6166d32a57b2f3deace695a90dfd14994d165f60ef2a12b83efa51558",
+      "public_copy_sha256": "0c1fc45ff51e0e2950b78679ca057cf89a612884e3e0d58c6cbcb1f85f5a34d3"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_critical_diag_stopped_20261118_193336/REPORT_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "f6882a417edcc77d2a8c81f0e5c26ee6310cf499ce784759ac74b03a2f2a9425",
+      "public_copy_sha256": "6feb52a742486f1edc3922fe851314bf71987971cee7ad833a16e9f7244f7b37"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_doom_v12_offline_20261119_202906/REPORT_RU.md",
+      "local_account_path_replacements": 2,
+      "local_bundle_sha256": "97790271e94a8b5698007eaccf0c5493c5ac80f9a529a29126733bc1e014deab",
+      "public_copy_sha256": "e5a2b8033df2b500956c38342d6150c00d2b29360c94427f087d052327c592f4"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_game_sdk_start_20261120_170604/sdk/docs/MORNING_TEST_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "d6387862cd79975dd192320a38de808c0387d52ad325aeaa324aa06aa1483151",
+      "public_copy_sha256": "15c3b3b943c914e04c2da15659e7f3355ccc03707a9348cd53e29f721dc35cd9"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_keymap_trial_20261118/REPORT_RU.md",
+      "local_account_path_replacements": 3,
+      "local_bundle_sha256": "bc2e936291d34e0ac117c89c7308a72f19bf4cfaa2bbce4b613539c926461b47",
+      "public_copy_sha256": "f4d17aed98a601caa6d38248cab22a11009f117619aa62186ab9e8adaefa9169"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_keymap_written_20261118_185104/REPORT_RU.md",
+      "local_account_path_replacements": 2,
+      "local_bundle_sha256": "a84efd710a315ee2e4a8ed43471d6f19f5f2f3db6366f027e61c7ffeb8abaed7",
+      "public_copy_sha256": "44377b3ef41e07f43986d2128e4e195eb87b71ee187d624bd123f5fd406f1405"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_platform_0_1_offline_20261120_020525/docs/MORNING_TEST_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "0dd51042a09f4a48b350b54cec161361a3fb09d23c486a25e5940c129d63636a",
+      "public_copy_sha256": "b254c6beff0948c48ec691450bff611ef830d34abd955fd151d997a6ffbf22ee"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_runtime_clock_observation_20261118_201201_362664/REPORT_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "462a3ae0d649a99e63aa7189c739a25eadc452856b13a44a31d1fad2b2512fb1",
+      "public_copy_sha256": "baf71579bcd4f9b6e2d9c81e426d216d62365551f567a390bd446c4e22b2e20b"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_runtime_v9_offline_20261119_153250/REPORT_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "9e574a8faedc8c26a1dc1136caca03447d24245650574240a833fb55c3856864",
+      "public_copy_sha256": "4f2b558818b986500d05eb47609be0a4aa12357beca89a5f5d63dbe3db6ddfbf"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_stock_clock_research_20261119_195336/REPORT_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "8c5df4a141247cfeb5a1e26c4d3d7d5c1995ea85f5af2599057f86d0d0f39755",
+      "public_copy_sha256": "ed7ec5793a92e0490e4cb173e5a5e8c3ba2c59abc02c2cc9f98ae0427369f811"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/kenshi_v7_fatal_alignment_20261119_144018/REPORT_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "0e05bbfce4f387227539a4b29a1c8e19893543fc85cdad06e6c4314e8ea66f53",
+      "public_copy_sha256": "c04017248330e1726b8acf3132ac185a9e831f28c8e7b9460cbe872ff6c844c4"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/platform_scope_revision_20261119_205924/before_AGENTS.md",
+      "local_account_path_replacements": 5,
+      "local_bundle_sha256": "f580820c24f9d42e4a187afdc68e8d90e2300cc4ab7a46db3a065ff03bcaf03f",
+      "public_copy_sha256": "ca39410311c539885690617239e6654210c3473e960b0aacf318b25624c3c13f"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/platform_scope_revision_20261119_205924/before_CONTINUE_PLATFORM_PROMPT_RU.md",
+      "local_account_path_replacements": 9,
+      "local_bundle_sha256": "8db4f6d43b50760806912d9fde54e18dc2848d15c8e3072c0f10ef3b38106592",
+      "public_copy_sha256": "90335bdf48caf4cdfd4a25405cba3bfe920b67fe4312466e100f446f4dfec818"
+    },
+    {
+      "file": "originals/history/new_chat_outputs/platform_scope_revision_20261119_205924/before_PLATFORM_PLAN_RU.md",
+      "local_account_path_replacements": 8,
+      "local_bundle_sha256": "e371d5466106ef7896b07437e014350eb5b035b7f80f982449339df6a2dcbeb4",
+      "public_copy_sha256": "10dff32095f5313f19d43d867b59c7c21ced69999e35c93a6e86def0229ef68d"
+    },
+    {
+      "file": "originals/platform_root/AGENTS.source.txt",
+      "local_account_path_replacements": 43,
+      "local_bundle_sha256": "9ec30ba0c63f5e355600cf02eade6d67931fb79c7ca23ac6f5ccddbd88d5b985",
+      "public_copy_sha256": "37757fb6b0866cd5a8142d25eb0bc8bc3c3da15e934243d2d8f51181378d06fb"
+    },
+    {
+      "file": "originals/platform_root/CONTINUE_PLATFORM_PROMPT_RU.md",
+      "local_account_path_replacements": 20,
+      "local_bundle_sha256": "72fe85af70c895406465ed52f75a3a1fef816b0909579ccf7cc7ff8e02ffd4c9",
+      "public_copy_sha256": "4f98b398918c1ea0d25c095e04158d912b083129e24b2ec3a18c06bdde70f64d"
+    },
+    {
+      "file": "originals/platform_root/FIRMWARE_MVP_SCOPE_RU.md",
+      "local_account_path_replacements": 3,
+      "local_bundle_sha256": "539ee64afd8589238ed6b771b9ab0ff9d775375f5b1b801f87811abd075c54d6",
+      "public_copy_sha256": "95255012adee7a0653e5a681f43b059fd8543e69d100bce44f8f47721d6cc90f"
+    },
+    {
+      "file": "originals/platform_root/NIGHT_PLATFORM_RESULT_RU.md",
+      "local_account_path_replacements": 8,
+      "local_bundle_sha256": "a929e893cbe03bd35f168786e0f743579dd782e1530cee806afb6204e02f7f83",
+      "public_copy_sha256": "5c9de3a3577dd97d542ff02845a9906b725ed536e76cdcc91763f333c696db92"
+    },
+    {
+      "file": "originals/platform_root/PLATFORM_PLAN_RU.md",
+      "local_account_path_replacements": 19,
+      "local_bundle_sha256": "51a805e28a8a36bb92df72e30746bb360cb4d1a891f580a5ee594e54e7c94444",
+      "public_copy_sha256": "04ab18a3bffba92182726f34166cf46424216b47cfa6882c4069446878145df0"
+    },
+    {
+      "file": "originals/research/RESEARCH_NEXT_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "ebe79defbb1174c2afd06c6f7a3ff727d6e3b680ca71ce25b04ad6a2d2b3de4a",
+      "public_copy_sha256": "cbe39d5fb8d91bbdfa1aaebd83e5eea9ee9901ddc3ad2379ad0e16bd7666d262"
+    },
+    {
+      "file": "originals/sdk_start/docs/MORNING_TEST_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "d6387862cd79975dd192320a38de808c0387d52ad325aeaa324aa06aa1483151",
+      "public_copy_sha256": "15c3b3b943c914e04c2da15659e7f3355ccc03707a9348cd53e29f721dc35cd9"
+    },
+    {
+      "file": "PHONE_FULL_GUIDE_RU.md",
+      "local_account_path_replacements": 13,
+      "local_bundle_sha256": "aac9218d528e0a3d8ce8756065bdeb2ddc7444fbb80e2c7681ce1257cd1390d2",
+      "public_copy_sha256": "318e58b5a8ac12f5620f74502c4667755f183f4745fa595261bb56a8fa5df091"
+    },
+    {
+      "file": "README.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "49218f0c56724169c24df15a4182b7ea049e642bb2a7d04e8f758eeb2b0caca5",
+      "public_copy_sha256": "dff114a2b7b2d4e9cab0c7f76e1965f7ac5196805bbed1f2b7cd1751239d918b"
+    },
+    {
+      "file": "SOURCE_INDEX.md",
+      "local_account_path_replacements": 161,
+      "local_bundle_sha256": "49725099c7c0841598025116d167697624f3d443920d39ff199b1f49670b316b",
+      "public_copy_sha256": "c2af7bed6151c57ed33040fbef469940b5fbe8bce770a5eccbf8ed9957268d83"
+    },
+    {
+      "file": "SOURCES.json",
+      "local_account_path_replacements": 161,
+      "local_bundle_sha256": "b1e92c0d6cfb78283c507cd83c878da3439ffff273af02c92882c71cf757d566",
+      "public_copy_sha256": "0236599a6fd17ebeecf358914f88613eb640ccbf44870cd96fe1e6134bf73b21"
+    },
+    {
+      "file": "state/captured_key_contacts.PHOTO_HISTORICAL.json",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "315e7a8fdf709cb54ba002745445a1a385a4c2d2287a750eace1ba0fb0f3b11c",
+      "public_copy_sha256": "7c7c113a25405eb07fd36fc72825fb6906f9b81a4d31241dc2c430a24238a746"
+    },
+    {
+      "file": "state/current_battery_observation.json",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "71b9ee8291cbba4b201c034d9aea1d2d2917b20cefbcbd9b34bfb3c5c95f46d7",
+      "public_copy_sha256": "24084a0e81bbfbe279dbefc32afdcf7dc883c88478b152cfb95c1b58ef60be3f"
+    },
+    {
+      "file": "state/current_game_sdk_starter.json",
+      "local_account_path_replacements": 3,
+      "local_bundle_sha256": "d258df447d43a6db8a29534a259e76d6027adfd2e12c7907311cbd946e27267d",
+      "public_copy_sha256": "b13c897ed7e07c3cced84032fc8e0e54f53e0988aa8603e73c7fd766bfe71542"
+    },
+    {
+      "file": "state/current_hw03_progress.json",
+      "local_account_path_replacements": 11,
+      "local_bundle_sha256": "9d1b39cf882e22bebdd9bb85217d1dfdfe688a5da38e4f2dfc3ad1099b0efe6a",
+      "public_copy_sha256": "531ede15bba58a0427ccb7327f5d85c2822aebf76422dccefdabe84b610f6652"
+    },
+    {
+      "file": "state/current_hw_diagnostics_candidate.json",
+      "local_account_path_replacements": 10,
+      "local_bundle_sha256": "8820eae5bab1eab58dcde31de448d2994a8b866c9a5007208280d3a30843e4f4",
+      "public_copy_sha256": "9761a244466c536343fc7d8eae9e22e5272f8b30f74bd0d2983c011703eaea33"
+    },
+    {
+      "file": "state/current_installed_firmware.json",
+      "local_account_path_replacements": 5,
+      "local_bundle_sha256": "20ea1983d9fdac376ecda2fb0a8fe4450d6783dcfe98aec95e86d55f5a66e731",
+      "public_copy_sha256": "b03e1fff1bd4667b8c6ea5aff2be06fa7ddb2dc9e8195c4d6e7ae96111cab34d"
+    },
+    {
+      "file": "state/current_platform_development.json",
+      "local_account_path_replacements": 12,
+      "local_bundle_sha256": "9f7d42bf7693ca16b025d4fdfd85f296b837a0eb5210430a75956ff92c6d107a",
+      "public_copy_sha256": "ad5cba4415175af66b7bdb4df65922d8daddedbc28741da63cdf0275140c4fb0"
+    },
+    {
+      "file": "VERIFY_INTEGRITY_RU.md",
+      "local_account_path_replacements": 1,
+      "local_bundle_sha256": "2b721ab429dec98e2c3e6f83da9b51366d01308acc5e00289ef20432e65acb82",
+      "public_copy_sha256": "14dc7b6076319016c4fd8f893ec72ae29d993ab9662081d00faefa6d0dee73ba"
+    }
+  ],
+  "notes": [
+    "Public source hashes and manifest have been regenerated after documented path redactions.",
+    "No firmware, original device dump, DA, writer, WAD, user media or SDK source code is included.",
+    "This public edition does not assert that referenced local SDK/research files are downloadable here."
+  ]
+}

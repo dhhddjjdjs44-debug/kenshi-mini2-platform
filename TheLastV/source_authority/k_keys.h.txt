@@ -1,0 +1,27 @@
+/* Kenshi Mini 2 physical key contacts. Active-low 5x16-bit keypad words.
+ * Source: 20-Nov-2026 21-step photo capture; END was skipped, not guessed.
+ * Single source of truth for launcher, SDK, tester and optional Doom. */
+#ifndef K_KEYS_H
+#define K_KEYS_H
+#include <stdint.h>
+#define K_CONTACT_NONE 255u
+#define K_PHYSICAL_KEYS(X) \
+    X(UP,39,"UP") X(DOWN,15,"DOWN") X(LEFT,21,"LEFT") X(RIGHT,30,"RIGHT") \
+    X(OK,42,"OK") X(LEFT_SOFT,33,"LEFT SOFT") X(RIGHT_SOFT,72,"RIGHT SOFT") \
+    X(CALL,24,"CALL") X(END,K_CONTACT_NONE,"END SHORT TAP") \
+    X(D1,27,"1") X(D2,0,"2") X(D3,51,"3") X(D4,12,"4") X(D5,13,"5") \
+    X(D6,57,"6") X(D7,6,"7") X(D8,9,"8") X(D9,48,"9") \
+    X(STAR,3,"*") X(D0,45,"0") X(HASH,54,"#")
+#define K_KEY_ID(id,contact,label) K_PHYS_##id,
+enum k_physical_key { K_PHYSICAL_KEYS(K_KEY_ID) K_PHYS_COUNT };
+#undef K_KEY_ID
+#define K_KEY_CONTACT(id,contact,label) K_CONTACT_##id = contact,
+enum k_key_contact { K_PHYSICAL_KEYS(K_KEY_CONTACT) };
+#undef K_KEY_CONTACT
+unsigned k_key_contact(unsigned key);
+const char *k_key_name(unsigned key);
+const char *k_contact_name(unsigned contact);
+int k_contact_down(const uint16_t raw[5], unsigned contact);
+uint32_t k_keys_logical(const uint16_t raw[5]);
+uint16_t k_keys_digits(const uint16_t raw[5]);
+#endif

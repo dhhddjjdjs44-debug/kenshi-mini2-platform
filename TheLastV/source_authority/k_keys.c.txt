@@ -1,0 +1,46 @@
+#include "k_keys.h"
+#include "k_platform.h"
+struct key_entry { uint8_t contact; const char *name; };
+#define K_KEY_ENTRY(id,contact,label) {contact,label},
+static const struct key_entry map[] = { K_PHYSICAL_KEYS(K_KEY_ENTRY) };
+#undef K_KEY_ENTRY
+unsigned k_key_contact(unsigned key) {
+    return key < K_PHYS_COUNT ? map[key].contact : K_CONTACT_NONE;
+}
+const char *k_key_name(unsigned key) {
+    return key < K_PHYS_COUNT ? map[key].name : "COMPLETE";
+}
+const char *k_contact_name(unsigned contact) {
+    unsigned i;
+    if (contact == K_CONTACT_NONE) return "NONE / MULTI";
+    for (i = 0; i < K_PHYS_COUNT; ++i)
+        if (map[i].contact == contact) return map[i].name;
+    return "UNMAPPED";
+}
+int k_contact_down(const uint16_t raw[5], unsigned contact) {
+    return raw && contact < 80u &&
+        (((uint16_t)~raw[contact / 16u] >> (contact % 16u)) & 1u);
+}
+uint32_t k_keys_logical(const uint16_t raw[5]) {
+    uint32_t v = 0u;
+    if (k_contact_down(raw,K_CONTACT_UP) || k_contact_down(raw,K_CONTACT_D2)) v |= K_UP;
+    if (k_contact_down(raw,K_CONTACT_DOWN) || k_contact_down(raw,K_CONTACT_D8)) v |= K_DOWN;
+    if (k_contact_down(raw,K_CONTACT_LEFT) || k_contact_down(raw,K_CONTACT_D4)) v |= K_LEFT;
+    if (k_contact_down(raw,K_CONTACT_RIGHT) || k_contact_down(raw,K_CONTACT_D6)) v |= K_RIGHT;
+    /* Conventional soft keys: left selects, right returns. UP must NEVER exit. */
+    if (k_contact_down(raw,K_CONTACT_OK) || k_contact_down(raw,K_CONTACT_LEFT_SOFT)) v |= K_CONFIRM;
+    if (k_contact_down(raw,K_CONTACT_RIGHT_SOFT)) v |= K_BACK;
+    if (k_contact_down(raw,K_CONTACT_D5)) v |= K_ACTION;
+    if (k_contact_down(raw,K_CONTACT_CALL)) v |= K_CALL;
+    return v;
+}
+uint16_t k_keys_digits(const uint16_t raw[5]) {
+    static const uint8_t contacts[] = {K_CONTACT_D0,K_CONTACT_D1,K_CONTACT_D2,
+        K_CONTACT_D3,K_CONTACT_D4,K_CONTACT_D5,K_CONTACT_D6,K_CONTACT_D7,
+        K_CONTACT_D8,K_CONTACT_D9,K_CONTACT_STAR,K_CONTACT_HASH};
+    unsigned i;
+    uint16_t value = 0u;
+    for (i = 0; i < sizeof(contacts); ++i)
+        if (k_contact_down(raw,contacts[i])) value |= (uint16_t)(1u << i);
+    return value;
+}

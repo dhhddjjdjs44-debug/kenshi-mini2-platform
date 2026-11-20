@@ -1,0 +1,95 @@
+## SDK для своей игры выдан отдельно — 2026-11-20T17:15:19.011950+05:00
+
+Проверенный PC-start комплект: `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\outputs\kenshi_game_sdk_start_20261120_170604`.
+Указатель: work/current_game_sdk_starter.json. Независимый отDoom SDK распакован,
+собран и проверен:70групп, documented Preview-Game.ps1 -Headless PASS.
+В UNSEALED development78MODEL/PCгрупп PASS; добавлены6preview tests.
+Preview исполняет реальный ARM-код игры с FAKEHAL, не весь телефон и не аппаратный FPS.
+Своя игра: apps/demo_game.c/.h; guide docs/START_GAME_RU.md. В экспортированном SDK
+AGENTS.md самостоятельный: править sdk/комплекта, не provenanceworking_copy.
+Телефон остаётся STOCK;0deviceoperations в этой итерации, binaries unchanged;
+customaudio/vib нет, MHz неизвестны, MP3 direct player нет. Полный аппаратный релиз
+НЕ готов, SDK-start не подмена этим требованиям. USB-storage observation неcoldBootROM.
+Для каждой новой сборки игры пока парныеloader/ELFpins: не обещать SD-onlyupdate.
+
+## HW0.3: актуальная точка продолжения — 2026-11-20T16:41:40.830759+05:00
+
+**Устройство: STOCK**, не платформа0.1 и не HW0.3. Authority: `work/current_installed_firmware.json`,
+последний verifiedNOR834bf…1fd85 НЕfreshlivebaseline послеstockboot. Пользователь:
+динамикплеера слышен безнаушников, Snakevibесть, SnakeaudioНЕслышен; батареяустановлена
+сейчас («В телефоне аккум»), подключение/coldBootROMнеподтверждены. Вэтомofflinecheckpoint
+0USB/NOR/SDoperations; старыеwritersSPENT, новыйwriterне создан.
+
+**Разработка:** `C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700`
+UNSEALED, можно продолжатьздесь. Последнийотчёт: `REPORT_HW03_RU.md`;
+`work/current_hw_diagnostics_candidate.json` и `work/current_platform_development.json`
+обновлены по фактическим ELF/loaderhashes. SealedV11/V12/0.1/frozenHW02неправить.
+
+**Реализовано в кандидате:** общаяфото-карта20контактовSDK/shell/Doom/tester (UP39,
+RIGHT30,leftsoft33/rightsoft72,ENDunknown); новаяTCMESTMHZоценкаA/B,N/2N,3серии.
+72MODEL/PCгруппыPASS,обаpairedloader/FAT/app; ЭТОНЕhardware-retеst. exactCPUHz0,
+260MHzне доказаны. ФизическийaudioHAL/motor_setвсёещёunsupported; прежнийPMUprobe
+НЕощущался. Ключеваянаходка:stockmotoroverride идётвaudio/DSP,неgenericPMUfallback.
+
+**Не повторять закрытое исследование:** mainkernel1535504B и19DCMG223176B уже
+native-decoded/BCJпроверены; bootstrapDSPpatch,wakeup,PCMring,mappingвоспроизведены
+офлайн. ПолнаяstockOS/DSPнеbooted,realACK/analogrouteнет. StockDSPокнапересекают
+DoomBSS6728B/cache-регион:непереноситьадреса/старыеF0*/TCMвызовыlive.
+Следующийшаг:`research/hw/RESEARCH_NEXT_RU.md`. МузыкасSDещёнеinventoried;плеертолько
+preparedmono16WAVизKDATA.PAK,произвольныеSDtracks/MP3неподдержаны. PrivateDSPstock
+blobsНЕвSDK/публичныйпакет. Ниже—историяипостоянныеограничения; этотcheckpointновее.
+
+## Новый hardware-first кандидат0.2 — 2026-11-20T12:50:35.204692+05:00
+
+Код/продолжение: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700 (UNSEALED, можно продолжать здесь).
+Отчёт: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700\REPORT_HW_PRIORITY_RU.md.
+Указатель: C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\current_hw_diagnostics_candidate.json.
+62 MODEL/PC группы PASS + обе paired ARM loader/app модели (doom20frames),
+PT_LOAD/layout/budget и sealsV11/V12/0.1 PASS. Новые source/header тестируются
+-Werror; README/HW_DIAGNOSTICS_RU описывают exact limitations.
+Мотор: явный blocking50ms probe с in-call cleanup/stall guard, voltage сохранён;
+НЕ асинхронный haptic HAL/автономный one-shot/доказанное физическое движение.
+CPU:3x1048576 ADD lower-bound относительноGPT26M, НЕ exactMHz; PLL/cache не трогает.
+Keys:21-step EXPECT/DETECTED/contact/press/hold/release, RAM-only, NO auto-remap.
+Профиль: игровые UPDATE/CONVERT/LCD snapshots, НЕ обещание приростаFPS.
+Звук PCM ещё НЕ реализован. НОВОЕ: ALICE_2 декодирован1328768B,10381 boundary+
+length checks; stockAFE/DSP slice4cases MODEL PASS. Virtual mapping/kernelDCMG
+ещё неизвестны; не вызывать F0*/TCM veneers. Исследование/next:
+C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700\research\hw\RESEARCH_NEXT_RU.md.
+Private decoded .bin НЕ включать в SDK/пакет. StandardLZMA/75property sweep
+отрицательные — не повторять без нового основания; смотреть native decoder/GFH.
+0device operations/0writer; установленная0.1 DOOM c536e743…e7acd8 не менялась.
+Это ещё НЕ sealed release package. Физическая готовность неизвестна; старые
+SPENT trials не повторять, свежий live baseline не получен.
+
+## Приоритет пользователя: звук/вибро/CPU, затем keys, затем FPS — 2026-11-20T11:57:02.049658+05:00
+
+Текстовый отчёт: платформа работает, Doom иногда показывает >50FPS. Это не внешний
+замер FPS/CPU и не подтверждение каждого приложения. NOR authority остаётсяc536e743...e7acd8.
+Новая НЕ sealed рабочая копия C:\Users\USER\Documents\Codex\2026-11-18\new-chat\work\platform_hw_20261120_115700; parent670files/seal проверен, исходники не изменены.
+Приоритет1: реальный PCM sink, безопасный board motor, доказательства clock chain.
+Приоритет2: интерактивный key tester с expected/detected/raw/press/release, без угадывания mapping.
+Приоритет3: профилирование/оптимизация. Сейчас0device operations, нет свежей готовности к записи.
+
+# Kenshi platform source instructions
+
+Это новая платформа, не запуск старых V11/V12-инструментов.
+Для обычной разработки используй Build-Platform.ps1 / tools/build_platform.py,
+новые sdk/apps/ports/platform_tests. Старые build/tests/reports в полной рабочей
+копии унаследованы и не являются доказательствами этой платформы.
+
+Перед изменениями прочитай README_PLATFORM_RU.md, CAPABILITIES.json и docs.
+Doom — optional приложение, независимая sdk-сборка должна линковаться без него/WAD.
+Физические audio/motor пока unsupported, CPU MHz unknown. Не подделывать capability
+через успешный fake HAL, ненулевой PCM или PMIC readback.
+
+Сборка/модельные тесты offline. Никаких автоматических USB/карта/NOR операций.
+Физическое развёртывание только при свежей готовности пользователя, после актуальных
+инструкций research workspace и нового session/baseline review. Пакет не writer.
+Не трогать реальные IMEI/NV; PHONE.ID только частный подтверждённый пользователем config.
+
+Запечатанные родители V11/V12 и запечатанный release-пакет не редактировать.
+Когда эта development-копия будет запечатана (см. current_platform_development.json
+в родительском work), следующая правка требует отдельную копию с происхождением.
+Проверяй результат: build, ARM fixture, paired loader/FAT/platform model, budgets/pins.
+Отделяй MODEL_ONLY evidence от измерений на настоящем телефоне.
